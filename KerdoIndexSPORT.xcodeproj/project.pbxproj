@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C545FEB92917F8390035C945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FEB82917F8390035C945 /* AppDelegate.swift */; };
+		C545FEBB2917F8390035C945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FEBA2917F8390035C945 /* SceneDelegate.swift */; };
+		C545FEBD2917F8390035C945 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FEBC2917F8390035C945 /* MainViewController.swift */; };
+		C545FEC02917F8390035C945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545FEBE2917F8390035C945 /* Main.storyboard */; };
+		C545FEC32917F8390035C945 /* KedroIndex.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C545FEC12917F8390035C945 /* KedroIndex.xcdatamodeld */; };
+		C545FEC52917F83A0035C945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C545FEC42917F83A0035C945 /* Assets.xcassets */; };
+		C545FEC82917F83A0035C945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545FEC62917F83A0035C945 /* LaunchScreen.storyboard */; };
+		C546CCB72919359800DC28D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C546CCB62919359800DC28D3 /* ProfileViewController.swift */; };
+		C54F559F2919AA4A00BF963A /* NaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F559E2919AA4A00BF963A /* NaviViewController.swift */; };
+		C574D4AE29895992006C5370 /* Measure+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D4AA29895992006C5370 /* Measure+CoreDataClass.swift */; };
+		C574D4AF29895992006C5370 /* Measure+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D4AB29895992006C5370 /* Measure+CoreDataProperties.swift */; };
+		C574D4B029895992006C5370 /* Measure2+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D4AC29895992006C5370 /* Measure2+CoreDataClass.swift */; };
+		C574D4B129895992006C5370 /* Measure2+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D4AD29895992006C5370 /* Measure2+CoreDataProperties.swift */; };
+		C5780131294B2F98003D765E /* StorageYourEmailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5780130294B2F98003D765E /* StorageYourEmailData.swift */; };
+		C5780133294B33D6003D765E /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5780132294B33D6003D765E /* credentials.plist */; };
+		C5AC9FC82954A31C00FA3C9A /* GoogleSignInJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AC9FC72954A31C00FA3C9A /* GoogleSignInJob.swift */; };
+		C5B3BF462983CDE500096946 /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3BF452983CDE500096946 /* CoreDataManage.swift */; };
+		C5B5EA6E2987F2D80033CF5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5B5EA702987F2D80033CF5A /* Localizable.strings */; };
+		C5C04275295CE0D4001C006C /* ReachabilityJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C04274295CE0D4001C006C /* ReachabilityJob.swift */; };
+		C5FA1408294C850D00796B86 /* AboutKerdoIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA1407294C850D00796B86 /* AboutKerdoIndexViewController.swift */; };
+		C5FA140A294C931B00796B86 /* EmailJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA1409294C931B00796B86 /* EmailJob.swift */; };
+		C5FA140C294CACC700796B86 /* CreateJSONForMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA140B294CACC700796B86 /* CreateJSONForMessage.swift */; };
+		F1639541D49A807AFDE7BD0A /* Pods_KerdoIndexSPORT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452BCCB1F3335B825338E8CC /* Pods_KerdoIndexSPORT.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		452BCCB1F3335B825338E8CC /* Pods_KerdoIndexSPORT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KerdoIndexSPORT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E9FEB1D642390318FFD0CB7 /* Pods-KerdoIndexSPORT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerdoIndexSPORT.release.xcconfig"; path = "Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT.release.xcconfig"; sourceTree = "<group>"; };
+		AFBE6F6E09CA519CD789E45E /* Pods-KerdoIndexSPORT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerdoIndexSPORT.debug.xcconfig"; path = "Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT.debug.xcconfig"; sourceTree = "<group>"; };
+		C04A23045C412977F7AEED04 /* Pods-KedroIndex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KedroIndex.release.xcconfig"; path = "Target Support Files/Pods-KedroIndex/Pods-KedroIndex.release.xcconfig"; sourceTree = "<group>"; };
+		C53089782983F9430018AD1D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		C53089792983F9430018AD1D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C545FEB52917F8390035C945 /* KerdoIndexSPORT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KerdoIndexSPORT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C545FEB82917F8390035C945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C545FEBA2917F8390035C945 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C545FEBC2917F8390035C945 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C545FEBF2917F8390035C945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C545FEC22917F8390035C945 /* KedroIndex.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KedroIndex.xcdatamodel; sourceTree = "<group>"; };
+		C545FEC42917F83A0035C945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C545FEC72917F83A0035C945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C545FEC92917F83A0035C945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C546CCB62919359800DC28D3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C54F559E2919AA4A00BF963A /* NaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviViewController.swift; sourceTree = "<group>"; };
+		C574D4AA29895992006C5370 /* Measure+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measure+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C574D4AB29895992006C5370 /* Measure+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measure+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C574D4AC29895992006C5370 /* Measure2+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measure2+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C574D4AD29895992006C5370 /* Measure2+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measure2+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C578012F294B2C57003D765E /* MailCore2_bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailCore2_bridge.h; sourceTree = "<group>"; };
+		C5780130294B2F98003D765E /* StorageYourEmailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageYourEmailData.swift; sourceTree = "<group>"; };
+		C5780132294B33D6003D765E /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		C5AC9FC72954A31C00FA3C9A /* GoogleSignInJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInJob.swift; sourceTree = "<group>"; };
+		C5B3BF452983CDE500096946 /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
+		C5B5EA6F2987F2D80033CF5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5B5EA712987F2DC0033CF5A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5C04274295CE0D4001C006C /* ReachabilityJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityJob.swift; sourceTree = "<group>"; };
+		C5FA1407294C850D00796B86 /* AboutKerdoIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutKerdoIndexViewController.swift; sourceTree = "<group>"; };
+		C5FA1409294C931B00796B86 /* EmailJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailJob.swift; sourceTree = "<group>"; };
+		C5FA140B294CACC700796B86 /* CreateJSONForMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJSONForMessage.swift; sourceTree = "<group>"; };
+		C9A65717F9FA2353FF81422D /* Pods-KedroIndex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KedroIndex.debug.xcconfig"; path = "Target Support Files/Pods-KedroIndex/Pods-KedroIndex.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C545FEB22917F8390035C945 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1639541D49A807AFDE7BD0A /* Pods_KerdoIndexSPORT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87165D689044CCECA96226B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				452BCCB1F3335B825338E8CC /* Pods_KerdoIndexSPORT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CA7B54184E1C99AFD1E460A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9A65717F9FA2353FF81422D /* Pods-KedroIndex.debug.xcconfig */,
+				C04A23045C412977F7AEED04 /* Pods-KedroIndex.release.xcconfig */,
+				AFBE6F6E09CA519CD789E45E /* Pods-KerdoIndexSPORT.debug.xcconfig */,
+				7E9FEB1D642390318FFD0CB7 /* Pods-KerdoIndexSPORT.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C54123AA29508E8A00864D31 /* workingWithEmail */ = {
+			isa = PBXGroup;
+			children = (
+				C5FA140B294CACC700796B86 /* CreateJSONForMessage.swift */,
+				C5FA1409294C931B00796B86 /* EmailJob.swift */,
+				C5AC9FC72954A31C00FA3C9A /* GoogleSignInJob.swift */,
+				C5C04274295CE0D4001C006C /* ReachabilityJob.swift */,
+			);
+			path = workingWithEmail;
+			sourceTree = "<group>";
+		};
+		C54123AB29508ED800864D31 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C545FEBE2917F8390035C945 /* Main.storyboard */,
+				C545FEC62917F83A0035C945 /* LaunchScreen.storyboard */,
+				C5FA1407294C850D00796B86 /* AboutKerdoIndexViewController.swift */,
+				C546CCB62919359800DC28D3 /* ProfileViewController.swift */,
+				C54F559E2919AA4A00BF963A /* NaviViewController.swift */,
+				C545FEBC2917F8390035C945 /* MainViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		C54123AC29508F1500864D31 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C574D4AA29895992006C5370 /* Measure+CoreDataClass.swift */,
+				C574D4AB29895992006C5370 /* Measure+CoreDataProperties.swift */,
+				C574D4AC29895992006C5370 /* Measure2+CoreDataClass.swift */,
+				C574D4AD29895992006C5370 /* Measure2+CoreDataProperties.swift */,
+				C545FEC12917F8390035C945 /* KedroIndex.xcdatamodeld */,
+				C5780130294B2F98003D765E /* StorageYourEmailData.swift */,
+				C5B3BF452983CDE500096946 /* CoreDataManage.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C545FEAC2917F8390035C945 = {
+			isa = PBXGroup;
+			children = (
+				C545FEB72917F8390035C945 /* KedroIndex */,
+				C545FEB62917F8390035C945 /* Products */,
+				8CA7B54184E1C99AFD1E460A /* Pods */,
+				87165D689044CCECA96226B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C545FEB62917F8390035C945 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C545FEB52917F8390035C945 /* KerdoIndexSPORT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C545FEB72917F8390035C945 /* KedroIndex */ = {
+			isa = PBXGroup;
+			children = (
+				C545FEB82917F8390035C945 /* AppDelegate.swift */,
+				C545FEBA2917F8390035C945 /* SceneDelegate.swift */,
+				C54123AC29508F1500864D31 /* model */,
+				C54123AB29508ED800864D31 /* viewControllers */,
+				C54123AA29508E8A00864D31 /* workingWithEmail */,
+				C578012F294B2C57003D765E /* MailCore2_bridge.h */,
+				C545FEC42917F83A0035C945 /* Assets.xcassets */,
+				C5780132294B33D6003D765E /* credentials.plist */,
+				C545FEC92917F83A0035C945 /* Info.plist */,
+				C5B5EA702987F2D80033CF5A /* Localizable.strings */,
+			);
+			path = KedroIndex;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C545FEB42917F8390035C945 /* KerdoIndexSPORT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C545FECC2917F83A0035C945 /* Build configuration list for PBXNativeTarget "KerdoIndexSPORT" */;
+			buildPhases = (
+				36D0625F1D960B1389C07D53 /* [CP] Check Pods Manifest.lock */,
+				C545FEB12917F8390035C945 /* Sources */,
+				C545FEB22917F8390035C945 /* Frameworks */,
+				C545FEB32917F8390035C945 /* Resources */,
+				753E4227F64A5FC02010EB25 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KerdoIndexSPORT;
+			productName = KedroIndex;
+			productReference = C545FEB52917F8390035C945 /* KerdoIndexSPORT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C545FEAD2917F8390035C945 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					C545FEB42917F8390035C945 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = C545FEB02917F8390035C945 /* Build configuration list for PBXProject "KerdoIndexSPORT" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = C545FEAC2917F8390035C945;
+			productRefGroup = C545FEB62917F8390035C945 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C545FEB42917F8390035C945 /* KerdoIndexSPORT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C545FEB32917F8390035C945 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B5EA6E2987F2D80033CF5A /* Localizable.strings in Resources */,
+				C545FEC82917F83A0035C945 /* LaunchScreen.storyboard in Resources */,
+				C5780133294B33D6003D765E /* credentials.plist in Resources */,
+				C545FEC52917F83A0035C945 /* Assets.xcassets in Resources */,
+				C545FEC02917F8390035C945 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36D0625F1D960B1389C07D53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KerdoIndexSPORT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		753E4227F64A5FC02010EB25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C545FEB12917F8390035C945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C546CCB72919359800DC28D3 /* ProfileViewController.swift in Sources */,
+				C5FA140C294CACC700796B86 /* CreateJSONForMessage.swift in Sources */,
+				C545FEC32917F8390035C945 /* KedroIndex.xcdatamodeld in Sources */,
+				C5C04275295CE0D4001C006C /* ReachabilityJob.swift in Sources */,
+				C574D4AF29895992006C5370 /* Measure+CoreDataProperties.swift in Sources */,
+				C545FEBD2917F8390035C945 /* MainViewController.swift in Sources */,
+				C574D4B129895992006C5370 /* Measure2+CoreDataProperties.swift in Sources */,
+				C5AC9FC82954A31C00FA3C9A /* GoogleSignInJob.swift in Sources */,
+				C545FEB92917F8390035C945 /* AppDelegate.swift in Sources */,
+				C54F559F2919AA4A00BF963A /* NaviViewController.swift in Sources */,
+				C5FA140A294C931B00796B86 /* EmailJob.swift in Sources */,
+				C5B3BF462983CDE500096946 /* CoreDataManage.swift in Sources */,
+				C5FA1408294C850D00796B86 /* AboutKerdoIndexViewController.swift in Sources */,
+				C545FEBB2917F8390035C945 /* SceneDelegate.swift in Sources */,
+				C574D4AE29895992006C5370 /* Measure+CoreDataClass.swift in Sources */,
+				C5780131294B2F98003D765E /* StorageYourEmailData.swift in Sources */,
+				C574D4B029895992006C5370 /* Measure2+CoreDataClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C545FEBE2917F8390035C945 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C545FEBF2917F8390035C945 /* Base */,
+				C53089782983F9430018AD1D /* ru */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C545FEC62917F83A0035C945 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C545FEC72917F83A0035C945 /* Base */,
+				C53089792983F9430018AD1D /* ru */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C5B5EA702987F2D80033CF5A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5B5EA6F2987F2D80033CF5A /* en */,
+				C5B5EA712987F2DC0033CF5A /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C545FECA2917F83A0035C945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C545FECB2917F83A0035C945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C545FECD2917F83A0035C945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBE6F6E09CA519CD789E45E /* Pods-KerdoIndexSPORT.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 19;
+				DEVELOPMENT_TEAM = 6D3HJY6B2F;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AppAuth/AppAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Charts/Charts.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth/GTMAppAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleSignIn/GoogleSignIn.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftAlgorithms/Algorithms.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios/MailCore/\"",
+				);
+				INFOPLIST_FILE = KedroIndex/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KerdoIndexSPORT;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.7.3;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yasliks/xCodeProjects/KedroIndex/KedroIndex/MailCore2_bridge.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C545FECE2917F83A0035C945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E9FEB1D642390318FFD0CB7 /* Pods-KerdoIndexSPORT.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 19;
+				DEVELOPMENT_TEAM = 6D3HJY6B2F;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AppAuth/AppAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Charts/Charts.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth/GTMAppAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleSignIn/GoogleSignIn.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftAlgorithms/Algorithms.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios/MailCore/\"",
+				);
+				INFOPLIST_FILE = KedroIndex/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KerdoIndexSPORT;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.7.3;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yasliks/xCodeProjects/KedroIndex/KedroIndex/MailCore2_bridge.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C545FEB02917F8390035C945 /* Build configuration list for PBXProject "KerdoIndexSPORT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C545FECA2917F83A0035C945 /* Debug */,
+				C545FECB2917F83A0035C945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C545FECC2917F83A0035C945 /* Build configuration list for PBXNativeTarget "KerdoIndexSPORT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C545FECD2917F83A0035C945 /* Debug */,
+				C545FECE2917F83A0035C945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C545FEC12917F8390035C945 /* KedroIndex.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C545FEC22917F8390035C945 /* KedroIndex.xcdatamodel */,
+			);
+			currentVersion = C545FEC22917F8390035C945 /* KedroIndex.xcdatamodel */;
+			path = KedroIndex.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C545FEAD2917F8390035C945 /* Project object */;
+}

@@ -1,0 +1,159 @@
+
+/* Class = "UIButton"; configuration.title = "Сохранить"; ObjectID = "1Jm-VK-u7n"; */
+"1Jm-VK-u7n.configuration.title" = "Сохранить";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1Jm-VK-u7n"; */
+"1Jm-VK-u7n.normalTitle" = "Сохранить";
+
+/* Class = "UIButton"; configuration.title = "Войти"; ObjectID = "1On-EK-aIu"; */
+"1On-EK-aIu.configuration.title" = "Войти";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1On-EK-aIu"; */
+"1On-EK-aIu.normalTitle" = "Button2";
+
+/* Class = "UILabel"; text = "Индекс 1: Введите правильные данные в поля ДАД и Пульс"; ObjectID = "1aW-AV-yJB"; */
+"1aW-AV-yJB.text" = "Индекс 1: Введите правильные данные в поля ДАД и Пульс";
+
+/* Class = "UILabel"; text = "yourNameLabel"; ObjectID = "3ou-fo-qac"; */
+"3ou-fo-qac.text" = "yourNameLabel";
+
+/* Class = "UILabel"; text = "Имя в приложении:"; ObjectID = "7qv-jF-Ndp"; */
+"7qv-jF-Ndp.text" = "Имя в приложении:";
+
+/* Class = "UILabel"; text = "Под этим именем вы будете отображаться у тренера."; ObjectID = "8Nk-5J-Dur"; */
+"8Nk-5J-Dur.text" = "Под этим именем вы будете отображаться у тренера.";
+
+/* Class = "UILabel"; text = "ДАД"; ObjectID = "8sp-Rg-kdc"; */
+"8sp-Rg-kdc.text" = "ДАД";
+
+/* Class = "UILabel"; text = "Index=100*(1-DAD/Pulse), где:"; ObjectID = "9gp-bJ-aYN"; */
+"9gp-bJ-aYN.text" = "Index=100*(1-DAD/Pulse), где:";
+
+/* Class = "UIButton"; configuration.title = "Назад"; ObjectID = "At7-dT-IEW"; */
+"At7-dT-IEW.configuration.title" = "Назад";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "At7-dT-IEW"; */
+"At7-dT-IEW.normalTitle" = "Назад";
+
+/* Class = "UIViewController"; title = "mainController"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "mainController";
+
+/* Class = "UILabel"; text = "ДАД"; ObjectID = "C6x-dk-1fb"; */
+"C6x-dk-1fb.text" = "ДАД";
+
+/* Class = "UILabel"; text = "KerdoIndexSPORT - это приложение, которое позволяет вести личную статистику индекса кердо и отправлять ее тренеру."; ObjectID = "CCw-Kk-Zkd"; */
+"CCw-Kk-Zkd.text" = "KerdoIndexSPORT - это приложение, которое позволяет вести личную статистику индекса кердо и отправлять ее тренеру.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Cgn-TD-sUb"; */
+"Cgn-TD-sUb.text" = "Label";
+
+/* Class = "UILabel"; text = "Измерение"; ObjectID = "Djo-sQ-Nee"; */
+"Djo-sQ-Nee.text" = "Измерение";
+
+/* Class = "UIButton"; configuration.title = "Очистить графики"; ObjectID = "EFS-GJ-Q6S"; */
+"EFS-GJ-Q6S.configuration.title" = "Очистить графики";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "EFS-GJ-Q6S"; */
+"EFS-GJ-Q6S.normalTitle" = "Очистить графики";
+
+/* Class = "UILabel"; text = "Адрес электронной почты тренера:"; ObjectID = "FP0-X0-2ct"; */
+"FP0-X0-2ct.text" = "Адрес электронной почты тренера:";
+
+/* Class = "UILabel"; text = "Индекс 1:"; ObjectID = "FvK-sF-yM4"; */
+"FvK-sF-yM4.text" = "Индекс 1:";
+
+/* Class = "UILabel"; text = "Индекс Кердо будет больше нуля если пульс больше диастолического давления, равен нулю при их равенстве и меньше нуля при превышении ДАД над пульсом."; ObjectID = "GBR-s8-Kxz"; */
+"GBR-s8-Kxz.text" = "Индекс Кердо будет больше нуля если пульс больше диастолического давления, равен нулю при их равенстве и меньше нуля при превышении ДАД над пульсом.";
+
+/* Class = "UINavigationItem"; title = "Профиль"; ObjectID = "Igb-1d-L6Z"; */
+"Igb-1d-L6Z.title" = "Профиль";
+
+/* Class = "UILabel"; text = "20.45"; ObjectID = "JdS-Zz-PYb"; */
+"JdS-Zz-PYb.text" = "20.45";
+
+/* Class = "UILabel"; text = "-20.45"; ObjectID = "KkV-PO-ZbV"; */
+"KkV-PO-ZbV.text" = "-20.45";
+
+/* Class = "UILabel"; text = "Вход по электронной почте Gmail:"; ObjectID = "MtL-DC-zTm"; */
+"MtL-DC-zTm.text" = "Вход по электронной почте Gmail:";
+
+/* Class = "UILabel"; text = "Пульс"; ObjectID = "Ro9-or-zq4"; */
+"Ro9-or-zq4.text" = "Пульс";
+
+/* Class = "UILabel"; text = "Индекс 2: Введите правильные данные в поля ДАД и Пульс"; ObjectID = "SgH-gB-5qU"; */
+"SgH-gB-5qU.text" = "Индекс 2: Введите правильные данные в поля ДАД и Пульс";
+
+/* Class = "UILabel"; text = "Указанная электронная почта будет использоваться для входа в приложение. Можно использовать существующую или добавить новую."; ObjectID = "TFQ-ig-bjH"; */
+"TFQ-ig-bjH.text" = "Указанная электронная почта будет использоваться для входа в приложение. Можно использовать существующую или добавить новую.";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Vjp-ZK-vuP"; */
+"Vjp-ZK-vuP.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WRV-2i-pvI"; */
+"WRV-2i-pvI.text" = "Label";
+
+/* Class = "UILabel"; text = "trainerEmailError"; ObjectID = "WmC-zc-hRB"; */
+"WmC-zc-hRB.text" = "trainerEmailError";
+
+/* Class = "UILabel"; text = "Индекс 2"; ObjectID = "Y33-G4-QLa"; */
+"Y33-G4-QLa.text" = "Индекс 2";
+
+/* Class = "UINavigationItem"; title = "kerdoIndexSPORT"; ObjectID = "eqQ-ks-GrR"; */
+"eqQ-ks-GrR.title" = "kerdoIndexSPORT";
+
+/* Class = "UIViewController"; title = "Профиль"; ObjectID = "kjE-6x-WbW"; */
+"kjE-6x-WbW.title" = "Профиль";
+
+/* Class = "UIButton"; configuration.title = "00.00"; ObjectID = "koc-as-Prv"; */
+"koc-as-Prv.configuration.title" = "00.00";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "koc-as-Prv"; */
+"koc-as-Prv.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "DAD — диастолическое артериальное давление (мм рт. ст.);"; ObjectID = "lKg-Ld-TIk"; */
+"lKg-Ld-TIk.text" = "DAD — диастолическое артериальное давление (мм рт. ст.);";
+
+/* Class = "UILabel"; text = "Индекс Кердо — показатель, использующийся для оценки деятельности вегетативной нервной системы. Индекс вычисляется по формуле:"; ObjectID = "lL0-cN-o0p"; */
+"lL0-cN-o0p.text" = "Индекс Кердо — показатель, использующийся для оценки деятельности вегетативной нервной системы. Индекс вычисляется по формуле:";
+
+/* Class = "UIButton"; configuration.title = "00.00"; ObjectID = "n7G-mU-5h0"; */
+"n7G-mU-5h0.configuration.title" = "00.00";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "n7G-mU-5h0"; */
+"n7G-mU-5h0.normalTitle" = "Button5";
+
+/* Class = "UILabel"; text = "ТУТ ИНФОРМАЦИЯ ОБ АВТОРАХ, КОМПАНИИ И ПРИЛОЖЕНИИ"; ObjectID = "oj1-ZL-8qB"; */
+"oj1-ZL-8qB.text" = "ТУТ ИНФОРМАЦИЯ ОБ АВТОРАХ, КОМПАНИИ И ПРИЛОЖЕНИИ";
+
+/* Class = "UILabel"; text = "29.09 / 10:15"; ObjectID = "pzo-Id-o6B"; */
+"pzo-Id-o6B.text" = "29.09 / 10:15";
+
+/* Class = "UIButton"; configuration.title = "О KerdoIndexSPORT"; ObjectID = "quh-W1-rc7"; */
+"quh-W1-rc7.configuration.title" = "О KerdoIndexSPORT";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "quh-W1-rc7"; */
+"quh-W1-rc7.normalTitle" = "О KerdoIndexSPORT";
+
+/* Class = "UILabel"; text = "Индекс 1"; ObjectID = "rDm-2p-5dM"; */
+"rDm-2p-5dM.text" = "Индекс 1";
+
+/* Class = "UINavigationItem"; title = "О KerdoIndex"; ObjectID = "ruL-4V-93G"; */
+"ruL-4V-93G.title" = "О KerdoIndexSPORT";
+
+/* Class = "UILabel"; text = "Индекс 2:"; ObjectID = "sXy-oy-ZVc"; */
+"sXy-oy-ZVc.text" = "Индекс 2:";
+
+/* Class = "UIBarButtonItem"; title = "Профиль"; ObjectID = "tjb-nF-L3H"; */
+"tjb-nF-L3H.title" = "Профиль";
+
+/* Class = "UILabel"; text = "Электронная почта тренера нужна для отправки ваших данных."; ObjectID = "uKK-tl-pK4"; */
+"uKK-tl-pK4.text" = "Электронная почта тренера нужна для отправки ваших данных.";
+
+/* Class = "UILabel"; text = "Если значение этого индекса больше нуля, то говорят о преобладании симпатических влияний в деятельности вегетативной нервной системы, если меньше нуля, то о преобладании парасимпатических влияний, если равен нулю, то это говорит о функциональном равновесии."; ObjectID = "wG6-cw-FSK"; */
+"wG6-cw-FSK.text" = "Если значение этого индекса больше нуля, то говорят о преобладании симпатических влияний в деятельности вегетативной нервной системы, если меньше нуля, то о преобладании парасимпатических влияний, если равен нулю, то это говорит о функциональном равновесии.";
+
+/* Class = "UILabel"; text = "Пульс"; ObjectID = "wQ8-R9-DpU"; */
+"wQ8-R9-DpU.text" = "Пульс";
+
+/* Class = "UILabel"; text = "Pulse — частота пульса (уд. в мин.)."; ObjectID = "zkQ-4P-cgT"; */
+"zkQ-4P-cgT.text" = "Pulse — частота пульса (уд. в мин.).";

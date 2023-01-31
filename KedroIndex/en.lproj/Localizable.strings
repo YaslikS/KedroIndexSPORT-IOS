@@ -1,0 +1,62 @@
+// MARK: ENGLISH STRINGS
+
+
+
+// MARK: 1ое измерение: установка описания в infoKedro1Label
+"infoKedro1LabelincorrectIndex1" = "Index 1: Enter the correct data in the Pressure and Pulse fields";
+
+"infoKedro1Labelindex1Less-30" = "Index 1: Predominance of parasympathetic influences (value less than -30) - pronounced vagotonia";
+
+"infoKedro1Labelindex1Less-15" = "Index 1: Predominance of parasympathetic influences (value less than -15) - moderate vagotonia";
+
+"infoKedro1Labelindex1Above30" = "Index 1: Predominance of sympathetic influences (value above 30) - pronounced sympathicotonia";
+
+"infoKedro1Labelindex1Above15" = "Index 1: Predominance of sympathetic influences (value above 15) - moderate sympathicotonia";
+
+"infoKedro1Labelindex1-15to15" = "Index 1: Complete vegetative equilibrium (value from -15 to 15) - eitonia - balance of sympathetic and parasympathetic influences";
+
+
+// MARK: 2ое измерение: установка описания в infoKedro2Label
+"infoKedro1LabelincorrectIndex2" = "Index 2: Enter the correct data in the Pressure and Pulse fields";
+
+"infoKedro1Labelindex2Less-30" = "Index 2: Predominance of parasympathetic influences (value less than -30) - pronounced vagotonia";
+
+"infoKedro1Labelindex2Less-15" = "Index 2: Predominance of parasympathetic influences (value less than -15) - moderate vagotonia";
+
+"infoKedro1Labelindex2Above30" = "Index 2: Predominance of sympathetic influences (value above 30) - pronounced sympathicotonia";
+
+"infoKedro1Labelindex2Above15" = "Index 2: Predominance of sympathetic influences (value above 15) - moderate sympathicotonia";
+
+"infoKedro1Labelindex2-15to15" = "Index 2: Complete vegetative equilibrium (value from -15 to 15) - eitonia - balance of sympathetic and parasympathetic influences";
+
+
+// MARK: обработка alertDialog
+"cancelInAlertDialog" = "Cancel";
+
+"SaveInAlertDialog" = "Save";
+
+"ClearInAlertDialog" = "Clear";
+
+"ExitInAlertDialog" = "Logout";
+
+"areYouSureYouWantToKeepTheMeasurement" = "Are you sure you want to keep the measurement?";
+
+"areYouSureYouWantToClearTheCharts" = "Are you sure you want to clear the charts?";
+
+"areYouSureYouWantToGetOut" = "Are you sure you want to get out?";
+
+
+// MARK: кнопка логин/логаут
+"loginButtonTextLogin" = "Login";
+
+"loginButtonTextLogout" = "Logout from ";
+
+
+// MARK: resultUploadLabel
+"resultUploadLabelErrorSendingData" = "Error sending data";
+
+"resultUploadLabelErrorNoDataToSend" = "No data to send";
+
+"resultUploadLabelErrorUnknown" = "Unknown error";
+
+"resultUploadLabelSuccess" = "The data has been sent";

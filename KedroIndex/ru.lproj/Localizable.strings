@@ -1,0 +1,62 @@
+// MARK: RUSSIAN STRINGS
+
+
+
+// MARK: 1ое измерение: установка описания в infoKedro1Label
+"infoKedro1LabelincorrectIndex1" = "Индекс 1: Введите правильные данные в поля давления и пульса";
+
+"infoKedro1Labelindex1Less-30" = "Индекс 1: Преобладание парасимпатических влияний (значение менее -30) - выраженная ваготония";
+
+"infoKedro1Labelindex1Less-15" = "Индекс 1: Преобладание парасимпатических влияний (значение менее -15) - умеренная ваготония";
+
+"infoKedro1Labelindex1Above30" = "Индекс 1: Преобладание симпатических влияний (значение выше 30) - выраженная симпатикотония";
+
+"infoKedro1Labelindex1Above15" = "Индекс 1: Преобладание симпатических влияний (значение выше 15) - умеренная симпатикотония";
+
+"infoKedro1Labelindex1-15to15" = "Индекс 1: Полное вегетативное равновесие (значение от -15 до 15) - Эстония - баланс симпатических и парасимпатических влияний";
+
+
+// MARK: 2ое измерение: установка описания в infoKedro2Label
+"infoKedro1LabelincorrectIndex2" = "Индекс 2: Введите правильные данные в поля давления и пульса";
+
+"infoKedro1Labelindex2Less-30" = "Индекс 2: Преобладание парасимпатических влияний (значение менее -30) - выраженная ваготония";
+
+"infoKedro1Labelindex2Less-15" = "Индекс 2: Преобладание парасимпатических влияний (значение менее -15) - умеренная ваготония";
+
+"infoKedro1Labelindex2Above30" = "Индекс 2: Преобладание симпатических влияний (значение выше 30) - выраженная симпатикотония";
+
+"infoKedro1Labelindex2Above15" = "Индекс 2: Преобладание симпатических влияний (значение выше 15) - умеренная симпатикотония";
+
+"infoKedro1Labelindex2-15to15" = "Индекс 2: Полное вегетативное равновесие (значение от -15 до 15) - Эстония - баланс симпатических и парасимпатических влияний";
+
+
+// MARK: обработка alertDialog
+"cancelInAlertDialog" = "Отмена";
+
+"SaveInAlertDialog" = "Сохранить";
+
+"ClearInAlertDialog" = "Очистить";
+
+"ExitInAlertDialog" = "Выйти";
+
+"areYouSureYouWantToKeepTheMeasurement" = "Вы уверены, что хотите сохранить измерение?";
+
+"areYouSureYouWantToClearTheCharts" = "Вы уверены, что хотите очистить графики?";
+
+"areYouSureYouWantToGetOut" = "Вы уверены, что хотите выйти?";
+
+
+// MARK: кнопка логин/логаут
+"loginButtonTextLogin" = "Войти";
+
+"loginButtonTextLogout" = "Выйти из ";
+
+
+// MARK: resultUploadLabel
+"resultUploadLabelErrorSendingData" = "Ошибка при отправке данных";
+
+"resultUploadLabelErrorNoDataToSend" = "Нет данных для отправки";
+
+"resultUploadLabelErrorUnknown" = "Неизвестная ошибка";
+
+"resultUploadLabelSuccess" = "Данные были отправлены";
