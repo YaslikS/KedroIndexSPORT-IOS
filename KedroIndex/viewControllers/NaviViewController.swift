@@ -1,10 +1,3 @@
-//
-//  NaviViewController.swift
-//  KedroIndex
-//
-//  Created by Вячеслав Переяслов on 08.11.2022.
-//
-
 import UIKit
 
 class NaviViewController: UINavigationController {

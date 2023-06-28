@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>806338344064-61gc740e51oluf6vh5tcm13a4flj5q22.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.806338344064-61gc740e51oluf6vh5tcm13a4flj5q22</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAnpUIcRKsZJJRClMyc9iEqyuClEfEMDyg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>806338344064</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ru.amed.KerdoIndexSPORT</string>
+	<key>PROJECT_ID</key>
+	<string>kerdoindexdb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kerdoindexdb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:806338344064:ios:4c150b9dfb170e4eabe265</string>
+	<key>DATABASE_URL</key>
+	<string>https://kerdoindexdb-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>

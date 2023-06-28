@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50140B229F296EA007E97A9 /* sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50140B129F296EA007E97A9 /* sha256.swift */; };
 		C545FEB92917F8390035C945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FEB82917F8390035C945 /* AppDelegate.swift */; };
 		C545FEBB2917F8390035C945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FEBA2917F8390035C945 /* SceneDelegate.swift */; };
 		C545FEBD2917F8390035C945 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FEBC2917F8390035C945 /* MainViewController.swift */; };
@@ -16,19 +17,18 @@
 		C545FEC82917F83A0035C945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545FEC62917F83A0035C945 /* LaunchScreen.storyboard */; };
 		C546CCB72919359800DC28D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C546CCB62919359800DC28D3 /* ProfileViewController.swift */; };
 		C54F559F2919AA4A00BF963A /* NaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54F559E2919AA4A00BF963A /* NaviViewController.swift */; };
-		C574D4AE29895992006C5370 /* Measure+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D4AA29895992006C5370 /* Measure+CoreDataClass.swift */; };
-		C574D4AF29895992006C5370 /* Measure+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D4AB29895992006C5370 /* Measure+CoreDataProperties.swift */; };
-		C574D4B029895992006C5370 /* Measure2+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D4AC29895992006C5370 /* Measure2+CoreDataClass.swift */; };
-		C574D4B129895992006C5370 /* Measure2+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574D4AD29895992006C5370 /* Measure2+CoreDataProperties.swift */; };
-		C5780131294B2F98003D765E /* StorageYourEmailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5780130294B2F98003D765E /* StorageYourEmailData.swift */; };
+		C5780131294B2F98003D765E /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5780130294B2F98003D765E /* UserDefaultsManager.swift */; };
 		C5780133294B33D6003D765E /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5780132294B33D6003D765E /* credentials.plist */; };
-		C5AC9FC82954A31C00FA3C9A /* GoogleSignInJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AC9FC72954A31C00FA3C9A /* GoogleSignInJob.swift */; };
-		C5B3BF462983CDE500096946 /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3BF452983CDE500096946 /* CoreDataManage.swift */; };
+		C589F99A29C3611E0061188D /* FireBaseCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C589F99929C3611E0061188D /* FireBaseCloudManager.swift */; };
 		C5B5EA6E2987F2D80033CF5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5B5EA702987F2D80033CF5A /* Localizable.strings */; };
+		C5B7AA7729C1EFF400463618 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B7AA7629C1EFF400463618 /* User.swift */; };
+		C5B7AA7929C1F12700463618 /* MeasureNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B7AA7829C1F12700463618 /* MeasureNew.swift */; };
+		C5B7AA7B29C1F20800463618 /* JsonStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B7AA7A29C1F20800463618 /* JsonStructure.swift */; };
 		C5C04275295CE0D4001C006C /* ReachabilityJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C04274295CE0D4001C006C /* ReachabilityJob.swift */; };
+		C5D69B9A29C08ED7008D0BE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5D69B9929C08ED6008D0BE5 /* GoogleService-Info.plist */; };
+		C5D69B9C29C08F99008D0BE5 /* FireBaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D69B9B29C08F99008D0BE5 /* FireBaseAuthManager.swift */; };
 		C5FA1408294C850D00796B86 /* AboutKerdoIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA1407294C850D00796B86 /* AboutKerdoIndexViewController.swift */; };
-		C5FA140A294C931B00796B86 /* EmailJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA1409294C931B00796B86 /* EmailJob.swift */; };
-		C5FA140C294CACC700796B86 /* CreateJSONForMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA140B294CACC700796B86 /* CreateJSONForMessage.swift */; };
+		C5FA140C294CACC700796B86 /* MeasureJsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA140B294CACC700796B86 /* MeasureJsonManager.swift */; };
 		F1639541D49A807AFDE7BD0A /* Pods_KerdoIndexSPORT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452BCCB1F3335B825338E8CC /* Pods_KerdoIndexSPORT.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +37,7 @@
 		7E9FEB1D642390318FFD0CB7 /* Pods-KerdoIndexSPORT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerdoIndexSPORT.release.xcconfig"; path = "Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT.release.xcconfig"; sourceTree = "<group>"; };
 		AFBE6F6E09CA519CD789E45E /* Pods-KerdoIndexSPORT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerdoIndexSPORT.debug.xcconfig"; path = "Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT.debug.xcconfig"; sourceTree = "<group>"; };
 		C04A23045C412977F7AEED04 /* Pods-KedroIndex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KedroIndex.release.xcconfig"; path = "Target Support Files/Pods-KedroIndex/Pods-KedroIndex.release.xcconfig"; sourceTree = "<group>"; };
+		C50140B129F296EA007E97A9 /* sha256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sha256.swift; sourceTree = "<group>"; };
 		C53089782983F9430018AD1D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		C53089792983F9430018AD1D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C545FEB52917F8390035C945 /* KerdoIndexSPORT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KerdoIndexSPORT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,21 +51,19 @@
 		C545FEC92917F83A0035C945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C546CCB62919359800DC28D3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C54F559E2919AA4A00BF963A /* NaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviViewController.swift; sourceTree = "<group>"; };
-		C574D4AA29895992006C5370 /* Measure+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measure+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C574D4AB29895992006C5370 /* Measure+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measure+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C574D4AC29895992006C5370 /* Measure2+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measure2+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C574D4AD29895992006C5370 /* Measure2+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Measure2+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C578012F294B2C57003D765E /* MailCore2_bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailCore2_bridge.h; sourceTree = "<group>"; };
-		C5780130294B2F98003D765E /* StorageYourEmailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageYourEmailData.swift; sourceTree = "<group>"; };
+		C5780130294B2F98003D765E /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C5780132294B33D6003D765E /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
-		C5AC9FC72954A31C00FA3C9A /* GoogleSignInJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInJob.swift; sourceTree = "<group>"; };
-		C5B3BF452983CDE500096946 /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
+		C589F99929C3611E0061188D /* FireBaseCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseCloudManager.swift; sourceTree = "<group>"; };
 		C5B5EA6F2987F2D80033CF5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C5B5EA712987F2DC0033CF5A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5B7AA7629C1EFF400463618 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C5B7AA7829C1F12700463618 /* MeasureNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureNew.swift; sourceTree = "<group>"; };
+		C5B7AA7A29C1F20800463618 /* JsonStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStructure.swift; sourceTree = "<group>"; };
 		C5C04274295CE0D4001C006C /* ReachabilityJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityJob.swift; sourceTree = "<group>"; };
+		C5D69B9929C08ED6008D0BE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5D69B9B29C08F99008D0BE5 /* FireBaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseAuthManager.swift; sourceTree = "<group>"; };
 		C5FA1407294C850D00796B86 /* AboutKerdoIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutKerdoIndexViewController.swift; sourceTree = "<group>"; };
-		C5FA1409294C931B00796B86 /* EmailJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailJob.swift; sourceTree = "<group>"; };
-		C5FA140B294CACC700796B86 /* CreateJSONForMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJSONForMessage.swift; sourceTree = "<group>"; };
+		C5FA140B294CACC700796B86 /* MeasureJsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureJsonManager.swift; sourceTree = "<group>"; };
 		C9A65717F9FA2353FF81422D /* Pods-KedroIndex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KedroIndex.debug.xcconfig"; path = "Target Support Files/Pods-KedroIndex/Pods-KedroIndex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,15 +98,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C54123AA29508E8A00864D31 /* workingWithEmail */ = {
+		C54123AA29508E8A00864D31 /* fireBaseManagers */ = {
 			isa = PBXGroup;
 			children = (
-				C5FA140B294CACC700796B86 /* CreateJSONForMessage.swift */,
-				C5FA1409294C931B00796B86 /* EmailJob.swift */,
-				C5AC9FC72954A31C00FA3C9A /* GoogleSignInJob.swift */,
 				C5C04274295CE0D4001C006C /* ReachabilityJob.swift */,
+				C5D69B9B29C08F99008D0BE5 /* FireBaseAuthManager.swift */,
+				C589F99929C3611E0061188D /* FireBaseCloudManager.swift */,
 			);
-			path = workingWithEmail;
+			path = fireBaseManagers;
 			sourceTree = "<group>";
 		};
 		C54123AB29508ED800864D31 /* viewControllers */ = {
@@ -115,10 +113,10 @@
 			children = (
 				C545FEBE2917F8390035C945 /* Main.storyboard */,
 				C545FEC62917F83A0035C945 /* LaunchScreen.storyboard */,
-				C5FA1407294C850D00796B86 /* AboutKerdoIndexViewController.swift */,
-				C546CCB62919359800DC28D3 /* ProfileViewController.swift */,
-				C54F559E2919AA4A00BF963A /* NaviViewController.swift */,
 				C545FEBC2917F8390035C945 /* MainViewController.swift */,
+				C546CCB62919359800DC28D3 /* ProfileViewController.swift */,
+				C5FA1407294C850D00796B86 /* AboutKerdoIndexViewController.swift */,
+				C54F559E2919AA4A00BF963A /* NaviViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -126,13 +124,13 @@
 		C54123AC29508F1500864D31 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				C574D4AA29895992006C5370 /* Measure+CoreDataClass.swift */,
-				C574D4AB29895992006C5370 /* Measure+CoreDataProperties.swift */,
-				C574D4AC29895992006C5370 /* Measure2+CoreDataClass.swift */,
-				C574D4AD29895992006C5370 /* Measure2+CoreDataProperties.swift */,
+				C5B7AA7A29C1F20800463618 /* JsonStructure.swift */,
+				C5B7AA7829C1F12700463618 /* MeasureNew.swift */,
+				C5FA140B294CACC700796B86 /* MeasureJsonManager.swift */,
+				C5780130294B2F98003D765E /* UserDefaultsManager.swift */,
+				C5B7AA7629C1EFF400463618 /* User.swift */,
 				C545FEC12917F8390035C945 /* KedroIndex.xcdatamodeld */,
-				C5780130294B2F98003D765E /* StorageYourEmailData.swift */,
-				C5B3BF452983CDE500096946 /* CoreDataManage.swift */,
+				C50140B129F296EA007E97A9 /* sha256.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -160,11 +158,11 @@
 			children = (
 				C545FEB82917F8390035C945 /* AppDelegate.swift */,
 				C545FEBA2917F8390035C945 /* SceneDelegate.swift */,
+				C54123AA29508E8A00864D31 /* fireBaseManagers */,
 				C54123AC29508F1500864D31 /* model */,
 				C54123AB29508ED800864D31 /* viewControllers */,
-				C54123AA29508E8A00864D31 /* workingWithEmail */,
-				C578012F294B2C57003D765E /* MailCore2_bridge.h */,
 				C545FEC42917F83A0035C945 /* Assets.xcassets */,
+				C5D69B9929C08ED6008D0BE5 /* GoogleService-Info.plist */,
 				C5780132294B33D6003D765E /* credentials.plist */,
 				C545FEC92917F83A0035C945 /* Info.plist */,
 				C5B5EA702987F2D80033CF5A /* Localizable.strings */,
@@ -238,6 +236,7 @@
 				C5780133294B33D6003D765E /* credentials.plist in Resources */,
 				C545FEC52917F83A0035C945 /* Assets.xcassets in Resources */,
 				C545FEC02917F8390035C945 /* Main.storyboard in Resources */,
+				C5D69B9A29C08ED7008D0BE5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,23 +289,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50140B229F296EA007E97A9 /* sha256.swift in Sources */,
 				C546CCB72919359800DC28D3 /* ProfileViewController.swift in Sources */,
-				C5FA140C294CACC700796B86 /* CreateJSONForMessage.swift in Sources */,
+				C5FA140C294CACC700796B86 /* MeasureJsonManager.swift in Sources */,
+				C5B7AA7929C1F12700463618 /* MeasureNew.swift in Sources */,
 				C545FEC32917F8390035C945 /* KedroIndex.xcdatamodeld in Sources */,
 				C5C04275295CE0D4001C006C /* ReachabilityJob.swift in Sources */,
-				C574D4AF29895992006C5370 /* Measure+CoreDataProperties.swift in Sources */,
 				C545FEBD2917F8390035C945 /* MainViewController.swift in Sources */,
-				C574D4B129895992006C5370 /* Measure2+CoreDataProperties.swift in Sources */,
-				C5AC9FC82954A31C00FA3C9A /* GoogleSignInJob.swift in Sources */,
+				C5D69B9C29C08F99008D0BE5 /* FireBaseAuthManager.swift in Sources */,
 				C545FEB92917F8390035C945 /* AppDelegate.swift in Sources */,
 				C54F559F2919AA4A00BF963A /* NaviViewController.swift in Sources */,
-				C5FA140A294C931B00796B86 /* EmailJob.swift in Sources */,
-				C5B3BF462983CDE500096946 /* CoreDataManage.swift in Sources */,
+				C589F99A29C3611E0061188D /* FireBaseCloudManager.swift in Sources */,
 				C5FA1408294C850D00796B86 /* AboutKerdoIndexViewController.swift in Sources */,
+				C5B7AA7B29C1F20800463618 /* JsonStructure.swift in Sources */,
 				C545FEBB2917F8390035C945 /* SceneDelegate.swift in Sources */,
-				C574D4AE29895992006C5370 /* Measure+CoreDataClass.swift in Sources */,
-				C5780131294B2F98003D765E /* StorageYourEmailData.swift in Sources */,
-				C574D4B029895992006C5370 /* Measure2+CoreDataClass.swift in Sources */,
+				C5780131294B2F98003D765E /* UserDefaultsManager.swift in Sources */,
+				C5B7AA7729C1EFF400463618 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = 6D3HJY6B2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -478,9 +476,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleSignIn/GoogleSignIn.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftAlgorithms/Algorithms.framework/Headers\"",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios\"",
-					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios/MailCore/\"",
 				);
 				INFOPLIST_FILE = KedroIndex/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = KerdoIndexSPORT;
@@ -496,14 +491,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.3;
+				MARKETING_VERSION = 0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/yasliks/xCodeProjects/KedroIndex/KedroIndex/MailCore2_bridge.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,7 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = 6D3HJY6B2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -528,9 +523,6 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleSignIn/GoogleSignIn.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftAlgorithms/Algorithms.framework/Headers\"",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios\"",
-					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios/MailCore/\"",
 				);
 				INFOPLIST_FILE = KedroIndex/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = KerdoIndexSPORT;
@@ -546,14 +538,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.3;
+				MARKETING_VERSION = 0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/yasliks/xCodeProjects/KedroIndex/KedroIndex/MailCore2_bridge.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

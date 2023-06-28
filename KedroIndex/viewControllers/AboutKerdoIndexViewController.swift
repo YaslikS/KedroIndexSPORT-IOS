@@ -1,10 +1,3 @@
-//
-//  AboutKerdoIndexViewController.swift
-//  KerdoIndexSPORT
-//
-//  Created by Вячеслав Переяслов on 16.12.2022.
-//
-
 import UIKit
 
 class AboutKerdoIndexViewController: UIViewController {
