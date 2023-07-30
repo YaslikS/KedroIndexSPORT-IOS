@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C50140B229F296EA007E97A9 /* sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50140B129F296EA007E97A9 /* sha256.swift */; };
+		C51A988C2A727ED700576A36 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A988B2A727ED700576A36 /* RegisterViewController.swift */; };
+		C51A98A12A72F14300576A36 /* UserCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A989F2A72F14300576A36 /* UserCD+CoreDataClass.swift */; };
+		C51A98A22A72F14300576A36 /* UserCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A98A02A72F14300576A36 /* UserCD+CoreDataProperties.swift */; };
+		C51A98A42A73F2A900576A36 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A98A32A73F2A900576A36 /* CoreDataManager.swift */; };
+		C51A98A62A744DB800576A36 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A98A52A744DB700576A36 /* LoginViewController.swift */; };
 		C545FEB92917F8390035C945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FEB82917F8390035C945 /* AppDelegate.swift */; };
 		C545FEBB2917F8390035C945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FEBA2917F8390035C945 /* SceneDelegate.swift */; };
 		C545FEBD2917F8390035C945 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C545FEBC2917F8390035C945 /* MainViewController.swift */; };
@@ -38,6 +43,11 @@
 		AFBE6F6E09CA519CD789E45E /* Pods-KerdoIndexSPORT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerdoIndexSPORT.debug.xcconfig"; path = "Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT.debug.xcconfig"; sourceTree = "<group>"; };
 		C04A23045C412977F7AEED04 /* Pods-KedroIndex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KedroIndex.release.xcconfig"; path = "Target Support Files/Pods-KedroIndex/Pods-KedroIndex.release.xcconfig"; sourceTree = "<group>"; };
 		C50140B129F296EA007E97A9 /* sha256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sha256.swift; sourceTree = "<group>"; };
+		C51A988B2A727ED700576A36 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C51A989F2A72F14300576A36 /* UserCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C51A98A02A72F14300576A36 /* UserCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C51A98A32A73F2A900576A36 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C51A98A52A744DB700576A36 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C53089782983F9430018AD1D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		C53089792983F9430018AD1D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C545FEB52917F8390035C945 /* KerdoIndexSPORT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KerdoIndexSPORT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +108,39 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C51A988D2A72EC5800576A36 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				C5B7AA7A29C1F20800463618 /* JsonStructure.swift */,
+				C5B7AA7829C1F12700463618 /* MeasureNew.swift */,
+				C5FA140B294CACC700796B86 /* MeasureJsonManager.swift */,
+				C5780130294B2F98003D765E /* UserDefaultsManager.swift */,
+				C5B7AA7629C1EFF400463618 /* User.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		C51A988E2A72EC6500576A36 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C51A989F2A72F14300576A36 /* UserCD+CoreDataClass.swift */,
+				C51A98A02A72F14300576A36 /* UserCD+CoreDataProperties.swift */,
+				C51A98A32A73F2A900576A36 /* CoreDataManager.swift */,
+				C545FEC12917F8390035C945 /* KedroIndex.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C51A98A92A74657200576A36 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C546CCB62919359800DC28D3 /* ProfileViewController.swift */,
+				C51A988B2A727ED700576A36 /* RegisterViewController.swift */,
+				C51A98A52A744DB700576A36 /* LoginViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		C54123AA29508E8A00864D31 /* fireBaseManagers */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +157,7 @@
 				C545FEBE2917F8390035C945 /* Main.storyboard */,
 				C545FEC62917F83A0035C945 /* LaunchScreen.storyboard */,
 				C545FEBC2917F8390035C945 /* MainViewController.swift */,
-				C546CCB62919359800DC28D3 /* ProfileViewController.swift */,
+				C51A98A92A74657200576A36 /* Profile */,
 				C5FA1407294C850D00796B86 /* AboutKerdoIndexViewController.swift */,
 				C54F559E2919AA4A00BF963A /* NaviViewController.swift */,
 			);
@@ -124,13 +167,8 @@
 		C54123AC29508F1500864D31 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				C5B7AA7A29C1F20800463618 /* JsonStructure.swift */,
-				C5B7AA7829C1F12700463618 /* MeasureNew.swift */,
-				C5FA140B294CACC700796B86 /* MeasureJsonManager.swift */,
-				C5780130294B2F98003D765E /* UserDefaultsManager.swift */,
-				C5B7AA7629C1EFF400463618 /* User.swift */,
-				C545FEC12917F8390035C945 /* KedroIndex.xcdatamodeld */,
-				C50140B129F296EA007E97A9 /* sha256.swift */,
+				C51A988E2A72EC6500576A36 /* CoreData */,
+				C51A988D2A72EC5800576A36 /* Json */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -160,6 +198,7 @@
 				C545FEBA2917F8390035C945 /* SceneDelegate.swift */,
 				C54123AA29508E8A00864D31 /* fireBaseManagers */,
 				C54123AC29508F1500864D31 /* model */,
+				C50140B129F296EA007E97A9 /* sha256.swift */,
 				C54123AB29508ED800864D31 /* viewControllers */,
 				C545FEC42917F83A0035C945 /* Assets.xcassets */,
 				C5D69B9929C08ED6008D0BE5 /* GoogleService-Info.plist */,
@@ -289,21 +328,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51A98A62A744DB800576A36 /* LoginViewController.swift in Sources */,
 				C50140B229F296EA007E97A9 /* sha256.swift in Sources */,
 				C546CCB72919359800DC28D3 /* ProfileViewController.swift in Sources */,
 				C5FA140C294CACC700796B86 /* MeasureJsonManager.swift in Sources */,
 				C5B7AA7929C1F12700463618 /* MeasureNew.swift in Sources */,
 				C545FEC32917F8390035C945 /* KedroIndex.xcdatamodeld in Sources */,
+				C51A98A12A72F14300576A36 /* UserCD+CoreDataClass.swift in Sources */,
 				C5C04275295CE0D4001C006C /* ReachabilityJob.swift in Sources */,
 				C545FEBD2917F8390035C945 /* MainViewController.swift in Sources */,
 				C5D69B9C29C08F99008D0BE5 /* FireBaseAuthManager.swift in Sources */,
 				C545FEB92917F8390035C945 /* AppDelegate.swift in Sources */,
 				C54F559F2919AA4A00BF963A /* NaviViewController.swift in Sources */,
 				C589F99A29C3611E0061188D /* FireBaseCloudManager.swift in Sources */,
+				C51A98A22A72F14300576A36 /* UserCD+CoreDataProperties.swift in Sources */,
 				C5FA1408294C850D00796B86 /* AboutKerdoIndexViewController.swift in Sources */,
 				C5B7AA7B29C1F20800463618 /* JsonStructure.swift in Sources */,
+				C51A988C2A727ED700576A36 /* RegisterViewController.swift in Sources */,
 				C545FEBB2917F8390035C945 /* SceneDelegate.swift in Sources */,
 				C5780131294B2F98003D765E /* UserDefaultsManager.swift in Sources */,
+				C51A98A42A73F2A900576A36 /* CoreDataManager.swift in Sources */,
 				C5B7AA7729C1EFF400463618 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 2333;
 				DEVELOPMENT_TEAM = 6D3HJY6B2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -491,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -511,7 +555,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 2333;
 				DEVELOPMENT_TEAM = 6D3HJY6B2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -538,7 +582,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

@@ -3,10 +3,9 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -486,6 +485,7 @@
                         <outlet property="mainViewHeight" destination="ZR4-lu-GZW" id="yCx-NN-0I7"/>
                         <outlet property="navigationBar" destination="eqQ-ks-GrR" id="t2X-0c-X8z"/>
                         <outlet property="offlneModeInfoButton" destination="nHp-de-JRf" id="2qP-HJ-X4Z"/>
+                        <outlet property="profileButton" destination="tjb-nF-L3H" id="Ywv-pf-8bk"/>
                         <outlet property="pulse1TextField" destination="5Th-vN-MEF" id="m8a-lU-4jd"/>
                         <outlet property="pulse2TextField" destination="1VB-MG-d2i" id="Ex4-Cb-r3O"/>
                         <outlet property="pulseView" destination="b0t-A9-6t8" id="exF-Dp-QVn"/>
@@ -498,6 +498,113 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="871" y="-28"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="2co-eU-7tW">
+            <objects>
+                <viewController title="Login" id="dyk-5p-aW9" customClass="LoginViewController" customModule="KerdoIndexSPORT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S3a-0i-pVG">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dEu-FC-9wJ" userLabel="Stack View Auth">
+                                <rect key="frame" x="30" y="155" width="368" height="212.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login in to your kerdoIndex account:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjL-xs-dfQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="27.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="vQx-83-clZ" userLabel="Email Stack View">
+                                        <rect key="frame" x="0.0" y="42.666666666666657" width="368" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Email for login to KerdoIndex" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-Dc-5Uo" userLabel="Email TextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Yia-MZ-L8O"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="emailTextFieldChanged:" destination="dyk-5p-aW9" eventType="editingChanged" id="6dY-Bb-Tht"/>
+                                                </connections>
+                                            </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfR-34-t8J" userLabel="Email Worning Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="redColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="ucJ-rY-iqY" userLabel="Pass Stack View">
+                                        <rect key="frame" x="0.0" y="97.666666666666657" width="368" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6v-nc-5GD" userLabel="Password TextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="3SM-LL-gzc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="passTextFieldChanged:" destination="dyk-5p-aW9" eventType="editingChanged" id="Mga-cc-YeQ"/>
+                                                </connections>
+                                            </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGA-Ef-V5R" userLabel="Password Worning Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="redColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIc-XL-Vzo" userLabel="Login Button">
+                                        <rect key="frame" x="0.0" y="152.66666666666669" width="368" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="an6-YU-u8q"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                        <connections>
+                                            <action selector="loginButtonClicked:" destination="dyk-5p-aW9" eventType="touchUpInside" id="kfh-dn-qcs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vQx-83-clZ" secondAttribute="trailing" id="NTc-Jb-s4G"/>
+                                    <constraint firstAttribute="trailing" secondItem="EjL-xs-dfQ" secondAttribute="trailing" id="XOF-ib-c7L"/>
+                                    <constraint firstAttribute="trailing" secondItem="ucJ-rY-iqY" secondAttribute="trailing" id="fb8-B7-nPe"/>
+                                    <constraint firstItem="EjL-xs-dfQ" firstAttribute="leading" secondItem="dEu-FC-9wJ" secondAttribute="leading" id="l3l-95-ldp"/>
+                                    <constraint firstAttribute="trailing" secondItem="bIc-XL-Vzo" secondAttribute="trailing" id="npf-ZL-d1q"/>
+                                    <constraint firstItem="vQx-83-clZ" firstAttribute="leading" secondItem="dEu-FC-9wJ" secondAttribute="leading" id="qqT-g0-tvI"/>
+                                    <constraint firstItem="bIc-XL-Vzo" firstAttribute="leading" secondItem="dEu-FC-9wJ" secondAttribute="leading" id="xfx-9o-nYA"/>
+                                    <constraint firstItem="ucJ-rY-iqY" firstAttribute="leading" secondItem="dEu-FC-9wJ" secondAttribute="leading" id="yMm-1n-ZWw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="35N-cw-oMG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dEu-FC-9wJ" firstAttribute="top" secondItem="35N-cw-oMG" secondAttribute="top" constant="12" id="A5V-FV-6n9"/>
+                            <constraint firstItem="dEu-FC-9wJ" firstAttribute="leading" secondItem="35N-cw-oMG" secondAttribute="leading" constant="30" id="bS9-Jy-6XM"/>
+                            <constraint firstAttribute="trailing" secondItem="dEu-FC-9wJ" secondAttribute="trailing" constant="30" id="egh-7g-le3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="nk2-LS-ghj"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="VMX-Dc-5Uo" id="eVx-MQ-wKV"/>
+                        <outlet property="emailWorningLabel" destination="OfR-34-t8J" id="rFJ-Is-sb1"/>
+                        <outlet property="loginButton" destination="bIc-XL-Vzo" id="4QP-2Q-5bd"/>
+                        <outlet property="navigationBar" destination="nk2-LS-ghj" id="aL0-eL-6Id"/>
+                        <outlet property="passwordTextField" destination="Y6v-nc-5GD" id="ee0-mh-uDr"/>
+                        <outlet property="passwordWorningLabel" destination="aGA-Ef-V5R" id="JAx-cn-Zwh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDR-ha-gWe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2344" y="-700"/>
         </scene>
         <!--Profile-->
         <scene sceneID="YUh-b7-tSQ">
@@ -514,186 +621,143 @@
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="780"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="i0G-Sy-kUc">
-                                                <rect key="frame" x="30" y="20" width="368" height="362.33333333333331"/>
+                                                <rect key="frame" x="30" y="20" width="368" height="296.33333333333331"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KyV-E0-jti" userLabel="Stack View Login">
-                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="235.66666666666666"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KyV-E0-jti" userLabel="Stack View State Auth">
+                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="296.33333333333331"/>
                                                         <subviews>
                                                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-fr-tiW">
-                                                                <rect key="frame" x="124" y="-124" width="120" height="120"/>
+                                                                <rect key="frame" x="124" y="-120" width="120" height="120"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="120" id="uc8-GF-ZzI"/>
                                                                     <constraint firstAttribute="height" constant="120" id="yNj-xa-yWX"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to your kerdoIndex account:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtL-DC-zTm">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in or register in the system" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtL-DC-zTm" userLabel="State Auth Label">
                                                                 <rect key="frame" x="0.0" y="0.0" width="368" height="27.666666666666668"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Email for login to KerdoIndex" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIm-Su-rBD">
-                                                                <rect key="frame" x="0.0" y="35.666666666666657" width="368" height="40"/>
-                                                                <color key="backgroundColor" name="accentColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="TbO-7c-cgt"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="emailTextFieldChanged:" destination="kjE-6x-WbW" eventType="editingChanged" id="BA1-TF-Fws"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Valid Email!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLC-O2-PpG">
-                                                                <rect key="frame" x="0.0" y="79.666666666666657" width="368" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <color key="textColor" name="redColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfS-06-13V">
-                                                                <rect key="frame" x="0.0" y="83.666666666666657" width="368" height="40"/>
-                                                                <color key="backgroundColor" name="accentColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="qVI-fu-GA9"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="passTextFieldChanged:" destination="kjE-6x-WbW" eventType="editingChanged" id="1k5-qK-oPA"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVj-Jl-TBe">
-                                                                <rect key="frame" x="0.0" y="127.66666666666669" width="368" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <color key="textColor" name="redColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1On-EK-aIu">
-                                                                <rect key="frame" x="0.0" y="131.66666666666669" width="368" height="60"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="60" id="t5T-Cy-lZo"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
-                                                                <connections>
-                                                                    <action selector="LoginButtonClicked:" destination="kjE-6x-WbW" eventType="touchUpInside" id="NdZ-lw-EXt"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The specified email address will be used to log in to the application." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-ig-bjH">
-                                                                <rect key="frame" x="0.0" y="199.66666666666669" width="368" height="36"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="q3u-4R-Jyk" userLabel="Name Stack View">
+                                                                <rect key="frame" x="0.0" y="57.66666666666665" width="368" height="65.333333333333314"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name in KerdoIndex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yW-dK-LCC" userLabel="Name Info Label">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="20.333333333333332"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jgq-Xq-GyJ" userLabel="TF Button Stack View">
+                                                                        <rect key="frame" x="0.0" y="25.333333333333343" width="368" height="40"/>
+                                                                        <subviews>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name in KerdoIndex" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVX-TC-hQQ" userLabel="Name TextField">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="273" height="40"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="40" id="3xt-AE-wss"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits"/>
+                                                                            </textField>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aba-KY-3be" userLabel="Rename Button">
+                                                                                <rect key="frame" x="278" y="0.0" width="90" height="40"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="90" id="W9s-cE-WT4"/>
+                                                                                </constraints>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <buttonConfiguration key="configuration" style="tinted" title="Rename"/>
+                                                                                <connections>
+                                                                                    <action selector="renameButtonClicked:" destination="kjE-6x-WbW" eventType="touchUpInside" id="vdg-JI-2Yr"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7Rf-XM-7BY">
+                                                                <rect key="frame" x="0.0" y="153" width="368" height="143.33333333333337"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in if you already have an account, or register" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiB-2C-jvP" userLabel="Auth Info">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="19.333333333333332"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="76W-5a-deJ" userLabel="RegisLogin Stack View">
+                                                                        <rect key="frame" x="0.0" y="31.333333333333314" width="368" height="50"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClC-8x-rew" userLabel="Registration Button">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="178" height="50"/>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <buttonConfiguration key="configuration" style="gray" title="Registration"/>
+                                                                                <connections>
+                                                                                    <segue destination="Ddi-Vz-A4Z" kind="show" id="W2N-67-6Gz"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJr-1S-JXF" userLabel="Login Button">
+                                                                                <rect key="frame" x="190" y="0.0" width="178" height="50"/>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                                                                <connections>
+                                                                                    <segue destination="dyk-5p-aW9" kind="show" id="mE5-bB-19f"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="ClC-8x-rew" firstAttribute="top" secondItem="76W-5a-deJ" secondAttribute="top" id="1y1-rY-p63"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="ClC-8x-rew" secondAttribute="bottom" id="J29-lo-cT1"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="T5l-m3-e3Y"/>
+                                                                            <constraint firstItem="KJr-1S-JXF" firstAttribute="top" secondItem="76W-5a-deJ" secondAttribute="top" id="dh6-tf-8H8"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="KJr-1S-JXF" secondAttribute="bottom" id="jEk-8n-nPi"/>
+                                                                        </constraints>
+                                                                    </stackView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aym-Ww-L6I" userLabel="Logout Button">
+                                                                        <rect key="frame" x="0.0" y="93.333333333333314" width="368" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="50" id="pHT-2D-q48"/>
+                                                                        </constraints>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="filled" title="Logout">
+                                                                            <color key="baseBackgroundColor" name="redColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="logoutButtonClicked:" destination="kjE-6x-WbW" eventType="touchUpInside" id="GEE-r0-5KC"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="TFQ-ig-bjH" firstAttribute="leading" secondItem="KyV-E0-jti" secondAttribute="leading" id="4lY-7g-7ao"/>
-                                                            <constraint firstAttribute="trailing" secondItem="cfS-06-13V" secondAttribute="trailing" id="8Op-se-yXD"/>
-                                                            <constraint firstAttribute="trailing" secondItem="QIm-Su-rBD" secondAttribute="trailing" id="GfV-xt-g7H"/>
+                                                            <constraint firstItem="7Rf-XM-7BY" firstAttribute="leading" secondItem="KyV-E0-jti" secondAttribute="leading" id="FKo-8c-kEX"/>
                                                             <constraint firstItem="FOK-fr-tiW" firstAttribute="centerX" secondItem="KyV-E0-jti" secondAttribute="centerX" id="KWj-Nh-y0e"/>
-                                                            <constraint firstAttribute="trailing" secondItem="TFQ-ig-bjH" secondAttribute="trailing" id="OO2-Ej-X0d"/>
-                                                            <constraint firstItem="FLC-O2-PpG" firstAttribute="leading" secondItem="KyV-E0-jti" secondAttribute="leading" id="P9g-Qm-o45"/>
+                                                            <constraint firstAttribute="trailing" secondItem="7Rf-XM-7BY" secondAttribute="trailing" id="U64-4g-2y2"/>
                                                             <constraint firstItem="MtL-DC-zTm" firstAttribute="leading" secondItem="KyV-E0-jti" secondAttribute="leading" id="V4c-ks-i1S"/>
-                                                            <constraint firstItem="cfS-06-13V" firstAttribute="leading" secondItem="KyV-E0-jti" secondAttribute="leading" id="Xe1-0i-I49"/>
-                                                            <constraint firstItem="QIm-Su-rBD" firstAttribute="leading" secondItem="KyV-E0-jti" secondAttribute="leading" id="Zos-cC-UW7"/>
+                                                            <constraint firstAttribute="trailing" secondItem="q3u-4R-Jyk" secondAttribute="trailing" id="dXH-WO-HYs"/>
+                                                            <constraint firstItem="q3u-4R-Jyk" firstAttribute="leading" secondItem="KyV-E0-jti" secondAttribute="leading" id="dhd-in-9e5"/>
                                                             <constraint firstAttribute="trailing" secondItem="MtL-DC-zTm" secondAttribute="trailing" id="eCh-C6-pXQ"/>
-                                                            <constraint firstItem="1On-EK-aIu" firstAttribute="leading" secondItem="KyV-E0-jti" secondAttribute="leading" id="mes-Wi-Ebo"/>
-                                                            <constraint firstItem="VVj-Jl-TBe" firstAttribute="leading" secondItem="KyV-E0-jti" secondAttribute="leading" id="voy-Gr-Zzk"/>
-                                                            <constraint firstAttribute="trailing" secondItem="1On-EK-aIu" secondAttribute="trailing" id="ya5-AT-yue"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mrf-gF-0wf" userLabel="Stack View Name">
-                                                        <rect key="frame" x="0.0" y="255.66666666666666" width="368" height="106.66666666666666"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name in the KerdoIndex:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qv-jF-Ndp">
-                                                                <rect key="frame" x="0.0" y="0.0" width="251.33333333333334" height="28.666666666666668"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name in KerdoIndex" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LuP-gb-Tz9">
-                                                                <rect key="frame" x="0.0" y="38.666666666666629" width="368" height="40"/>
-                                                                <color key="backgroundColor" name="accentColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="qoq-Gt-Mas"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="nameTextFieldChanged:" destination="kjE-6x-WbW" eventType="editingChanged" id="ZPv-sv-6oS"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgg-3D-0tz">
-                                                                <rect key="frame" x="0.0" y="83.666666666666629" width="112.33333333333333" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <color key="textColor" name="redColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under this name, you will be displayed at the trainer." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nk-5J-Dur">
-                                                                <rect key="frame" x="0.0" y="88.666666666666629" width="357.33333333333331" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="LuP-gb-Tz9" secondAttribute="trailing" id="JTC-0l-JVW"/>
-                                                            <constraint firstItem="LuP-gb-Tz9" firstAttribute="leading" secondItem="mrf-gF-0wf" secondAttribute="leading" id="Wu3-dc-dBy"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="mrf-gF-0wf" firstAttribute="leading" secondItem="i0G-Sy-kUc" secondAttribute="leading" id="Azm-pb-4JM"/>
                                                     <constraint firstItem="KyV-E0-jti" firstAttribute="leading" secondItem="i0G-Sy-kUc" secondAttribute="leading" id="HzJ-AE-8hl"/>
                                                     <constraint firstAttribute="trailing" secondItem="KyV-E0-jti" secondAttribute="trailing" id="R6S-pz-UEb"/>
                                                     <constraint firstItem="KyV-E0-jti" firstAttribute="leading" secondItem="i0G-Sy-kUc" secondAttribute="leading" id="WPE-lv-YSU"/>
                                                     <constraint firstAttribute="trailing" secondItem="KyV-E0-jti" secondAttribute="trailing" id="aq6-ik-88Q"/>
-                                                    <constraint firstAttribute="trailing" secondItem="mrf-gF-0wf" secondAttribute="trailing" id="qKa-It-BB7"/>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quh-W1-rc7">
-                                                <rect key="frame" x="106.66666666666667" y="402.33333333333337" width="214.66666666666663" height="34.333333333333314"/>
+                                                <rect key="frame" x="106.66666666666667" y="336.33333333333331" width="214.66666666666663" height="34.333333333333314"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="About KerdoIndexSPORT"/>
                                                 <connections>
                                                     <segue destination="Njn-36-NBW" kind="show" id="9vL-J7-dD9"/>
                                                 </connections>
                                             </button>
-                                            <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-Lt-DWS">
-                                                <rect key="frame" x="0.0" y="0.0" width="428" height="780"/>
-                                                <subviews>
-                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="upT-jR-6Jf">
-                                                        <rect key="frame" x="184" y="360" width="60" height="60"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="ibG-Ym-OLF"/>
-                                                            <constraint firstAttribute="width" constant="60" id="rT3-wF-56F"/>
-                                                        </constraints>
-                                                        <color key="color" name="Color"/>
-                                                    </activityIndicatorView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login attempt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePC-7I-Opx">
-                                                        <rect key="frame" x="127.66666666666669" y="450" width="173" height="34.666666666666686"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                                        <color key="textColor" name="Color"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="labelColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="ePC-7I-Opx" firstAttribute="top" secondItem="upT-jR-6Jf" secondAttribute="bottom" constant="30" id="OQI-ME-Wpu"/>
-                                                    <constraint firstItem="ePC-7I-Opx" firstAttribute="centerX" secondItem="HbQ-Lt-DWS" secondAttribute="centerX" id="cVI-lk-fH1"/>
-                                                    <constraint firstItem="upT-jR-6Jf" firstAttribute="centerX" secondItem="HbQ-Lt-DWS" secondAttribute="centerX" id="iVi-py-1gh"/>
-                                                    <constraint firstItem="upT-jR-6Jf" firstAttribute="centerY" secondItem="HbQ-Lt-DWS" secondAttribute="centerY" id="yDY-aw-ifk"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="HbQ-Lt-DWS" firstAttribute="leading" secondItem="bAp-R8-J55" secondAttribute="leading" id="42e-1R-ISr"/>
-                                            <constraint firstAttribute="bottom" secondItem="HbQ-Lt-DWS" secondAttribute="bottom" id="5Rd-Xv-NIN"/>
                                             <constraint firstItem="quh-W1-rc7" firstAttribute="top" secondItem="i0G-Sy-kUc" secondAttribute="bottom" constant="20" id="8m3-1S-oQm"/>
                                             <constraint firstAttribute="trailing" secondItem="i0G-Sy-kUc" secondAttribute="trailing" constant="30" id="Nx3-Z2-oFK"/>
-                                            <constraint firstItem="HbQ-Lt-DWS" firstAttribute="top" secondItem="bAp-R8-J55" secondAttribute="top" id="X5h-62-cHp"/>
-                                            <constraint firstAttribute="trailing" secondItem="HbQ-Lt-DWS" secondAttribute="trailing" id="Xwd-x9-GOi"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="quh-W1-rc7" secondAttribute="bottom" constant="20" id="YiJ-6E-XAn"/>
                                             <constraint firstItem="quh-W1-rc7" firstAttribute="centerX" secondItem="bAp-R8-J55" secondAttribute="centerX" id="b4E-oB-sRV"/>
                                             <constraint firstItem="i0G-Sy-kUc" firstAttribute="leading" secondItem="bAp-R8-J55" secondAttribute="leading" constant="30" id="ouq-xi-uXP"/>
@@ -722,22 +786,174 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Igb-1d-L6Z"/>
                     <connections>
-                        <outlet property="emailTextField" destination="QIm-Su-rBD" id="vr2-pB-crf"/>
-                        <outlet property="loginButton" destination="1On-EK-aIu" id="b1z-lS-12a"/>
-                        <outlet property="loginMainLabel" destination="MtL-DC-zTm" id="oBH-k1-Y68"/>
-                        <outlet property="nameTextField" destination="LuP-gb-Tz9" id="9QS-Gq-kSm"/>
+                        <outlet property="loginButton" destination="KJr-1S-JXF" id="EKU-WS-RUn"/>
+                        <outlet property="logoutButton" destination="aym-Ww-L6I" id="iIW-U7-4uG"/>
+                        <outlet property="nameStackView" destination="q3u-4R-Jyk" id="dKB-HW-VzB"/>
+                        <outlet property="nameTextField" destination="WVX-TC-hQQ" id="rg1-so-o81"/>
                         <outlet property="navigationBar" destination="Igb-1d-L6Z" id="sqZ-oU-QWy"/>
-                        <outlet property="notValidEmailLabel" destination="FLC-O2-PpG" id="wxM-uC-mcs"/>
-                        <outlet property="notValidNameLabel" destination="Pgg-3D-0tz" id="QD2-FY-Jj0"/>
-                        <outlet property="notValidPassLabel" destination="VVj-Jl-TBe" id="BfO-nl-NbV"/>
-                        <outlet property="passwordTextField" destination="cfS-06-13V" id="VdT-Pl-cX1"/>
-                        <outlet property="progressView" destination="HbQ-Lt-DWS" id="mAl-mr-kUv"/>
+                        <outlet property="regisLoginStackView" destination="76W-5a-deJ" id="SFu-xr-0nm"/>
+                        <outlet property="registrationButton" destination="ClC-8x-rew" id="Hh3-7n-iVq"/>
+                        <outlet property="stateAuthLabel" destination="MtL-DC-zTm" id="SdD-OH-hQP"/>
                         <outlet property="yourAvatarImageView" destination="FOK-fr-tiW" id="8j2-U2-cxo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKb-9a-xoL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1607.9439252336447" y="-29.805615550755942"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="A5z-iM-C6d">
+            <objects>
+                <viewController title="Registration" id="Ddi-Vz-A4Z" customClass="RegisterViewController" customModule="KerdoIndexSPORT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zJb-Nm-4oM">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-mZ-WG4" userLabel="Stack View Auth">
+                                <rect key="frame" x="30" y="155.00000000000003" width="368" height="361.66666666666674"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register a new kerdoIndex account:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsm-Wh-9AQ" userLabel="Register Stack Title Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="27.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="SjL-fg-GjA" userLabel="Email Stack View">
+                                        <rect key="frame" x="0.0" y="42.666666666666657" width="368" height="83"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Email for login to KerdoIndex" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebd-LU-ZMm" userLabel="Email TextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="vA3-gb-Gtb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="emailTextFieldChanged:" destination="Ddi-Vz-A4Z" eventType="editingChanged" id="5Oc-MC-wqq"/>
+                                                </connections>
+                                            </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT4-5Q-KAV" userLabel="Email Worning Label">
+                                                <rect key="frame" x="0.0" y="43.666666666666686" width="368" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="redColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The specified email address will be used to log in to the application." lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gff-UB-XKB" userLabel="Email Info Label">
+                                                <rect key="frame" x="0.0" y="47" width="368" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="QgA-eS-cRC" userLabel="Pass Stack View">
+                                        <rect key="frame" x="0.0" y="140.66666666666669" width="368" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZbC-jh-CTM" userLabel="Password TextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="m3p-j6-k6P"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="passTextFieldChanged:" destination="Ddi-Vz-A4Z" eventType="editingChanged" id="VRJ-7d-0Lp"/>
+                                                </connections>
+                                            </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bi9-Uc-b1R" userLabel="Password Worning Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="redColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nSZ-2K-g5y" userLabel="Name Stack View">
+                                        <rect key="frame" x="0.0" y="195.66666666666669" width="368" height="91"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name in KerdoIndex" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eM8-cX-PxO" userLabel="Name TextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="fwi-WY-prR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="nameTextFieldChanged:" destination="Ddi-Vz-A4Z" eventType="editingChanged" id="Dyf-7F-W26"/>
+                                                </connections>
+                                            </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vr-v2-ftT" userLabel="Name Worning Label">
+                                                <rect key="frame" x="0.0" y="47.666666666666629" width="368" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="redColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under this name, you will be displayed at the sportsmans." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tZ-Te-luX" userLabel="Name Info Label">
+                                                <rect key="frame" x="0.0" y="55" width="368" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="7vr-v2-ftT" secondAttribute="trailing" id="5ah-3x-xfK"/>
+                                            <constraint firstItem="9tZ-Te-luX" firstAttribute="leading" secondItem="nSZ-2K-g5y" secondAttribute="leading" id="7Yf-cj-QLK"/>
+                                            <constraint firstAttribute="trailing" secondItem="9tZ-Te-luX" secondAttribute="trailing" id="F3V-t7-bdQ"/>
+                                            <constraint firstItem="7vr-v2-ftT" firstAttribute="leading" secondItem="nSZ-2K-g5y" secondAttribute="leading" id="FhH-YH-BWQ"/>
+                                            <constraint firstItem="eM8-cX-PxO" firstAttribute="leading" secondItem="nSZ-2K-g5y" secondAttribute="leading" id="bKZ-I1-ahl"/>
+                                            <constraint firstAttribute="trailing" secondItem="eM8-cX-PxO" secondAttribute="trailing" id="xCD-B4-6UE"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wq-lm-2lp" userLabel="Login Button">
+                                        <rect key="frame" x="0.0" y="301.66666666666669" width="368" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Ybr-x0-dzc"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Registration"/>
+                                        <connections>
+                                            <action selector="RegisterButtonClicked:" destination="Ddi-Vz-A4Z" eventType="touchUpInside" id="LRc-Er-Sws"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zsm-Wh-9AQ" secondAttribute="trailing" id="3Sf-ES-6IO"/>
+                                    <constraint firstItem="QgA-eS-cRC" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="8Hd-Be-L8L"/>
+                                    <constraint firstItem="nSZ-2K-g5y" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="LOx-XW-YyJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Wq-lm-2lp" secondAttribute="trailing" id="MRg-5O-TbO"/>
+                                    <constraint firstAttribute="trailing" secondItem="nSZ-2K-g5y" secondAttribute="trailing" id="QVm-Kk-mLw"/>
+                                    <constraint firstAttribute="trailing" secondItem="SjL-fg-GjA" secondAttribute="trailing" id="RQv-68-pGA"/>
+                                    <constraint firstItem="SjL-fg-GjA" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="XmG-DB-IJd"/>
+                                    <constraint firstAttribute="trailing" secondItem="QgA-eS-cRC" secondAttribute="trailing" id="agL-it-Ph0"/>
+                                    <constraint firstItem="1Wq-lm-2lp" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="iRC-5c-ESa"/>
+                                    <constraint firstItem="zsm-Wh-9AQ" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="t9q-rx-m0n"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wpk-gv-QVI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LiA-mZ-WG4" firstAttribute="leading" secondItem="zJb-Nm-4oM" secondAttribute="leading" constant="30" id="Tfp-62-iA5"/>
+                            <constraint firstAttribute="trailing" secondItem="LiA-mZ-WG4" secondAttribute="trailing" constant="30" id="YYy-Qa-8Zd"/>
+                            <constraint firstItem="LiA-mZ-WG4" firstAttribute="top" secondItem="wpk-gv-QVI" secondAttribute="top" constant="12" id="gwf-6j-z7f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Registration" id="MDs-vc-bZ3"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="ebd-LU-ZMm" id="v2I-Yp-l7T"/>
+                        <outlet property="emailWorningLabel" destination="nT4-5Q-KAV" id="fPh-LR-dtV"/>
+                        <outlet property="nameTextField" destination="eM8-cX-PxO" id="D0p-3L-smr"/>
+                        <outlet property="nameWorningLabel" destination="7vr-v2-ftT" id="QVW-uV-kmu"/>
+                        <outlet property="navigationBar" destination="MDs-vc-bZ3" id="ZDY-C8-CWX"/>
+                        <outlet property="passwordTextField" destination="ZbC-jh-CTM" id="mrw-60-dtl"/>
+                        <outlet property="passwordWorningLabel" destination="Bi9-Uc-b1R" id="gwr-7S-RdJ"/>
+                        <outlet property="registerButton" destination="1Wq-lm-2lp" id="VT2-3W-oE3"/>
+                        <outlet property="registerStackTitleLabel" destination="zsm-Wh-9AQ" id="96B-bE-z86"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0qB-bF-3EC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2344" y="-29"/>
         </scene>
         <!--About KerdoIndex-->
         <scene sceneID="h0F-Fv-2Qo">
@@ -882,7 +1098,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLp-CX-WK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2331" y="-30"/>
+            <point key="canvasLocation" x="2344" y="658"/>
         </scene>
         <!--Navi View Controller-->
         <scene sceneID="CbB-zk-Fl3">
@@ -907,9 +1123,6 @@
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="hand.point.down.fill" catalog="system" width="107" height="128"/>
-        <namedColor name="Color">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="accentColor">
             <color red="0.85699999332427979" green="0.93300002813339233" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -93,6 +93,18 @@ class UserDefaultsManager {
         return UserDefaults.standard.integer(forKey: "stateInternet")
     }
     
+    
+    // MARK: удаление всех данных
+    func deleteUserInfo() {
+        NSLog("deleteUserInfo" + "deleteUserInfo: entrance")
+        savePassword(password: "0")
+        saveYourEmail(emailAddress: "0")
+        saveYourName(name: "0")
+        saveIdUser(idUser: "")
+        saveYourImageURL(yourImageURL: "")
+    }
+
+    
 }
 
 

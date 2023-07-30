@@ -36,6 +36,7 @@ class MainViewController: UIViewController, ChartViewDelegate, UITextFieldDelega
     @IBOutlet weak var mainViewHeight: NSLayoutConstraint!
     @IBOutlet weak var jsonIsEmptyView: UIView!
     @IBOutlet weak var offlneModeInfoButton: UIButton!
+    @IBOutlet weak var profileButton: UIBarButtonItem!
     
     
     // MARK: переменные
@@ -86,24 +87,20 @@ class MainViewController: UIViewController, ChartViewDelegate, UITextFieldDelega
     // MARK: попытка авторизации
     func tryAuth(){
         NSLog(TAG + "tryAuth: entrance")
-        if (userDefaultsManager.getYourEmail() != "" && userDefaultsManager.getPassword() != "") {
-            NSLog(TAG + "tryAuth: getYourEmail && getPassword != empty")
-            fireBaseAuthManager.login(    //  нужно перегнать все на reauth
-                email: userDefaultsManager.getYourEmail(),
-                pass: userDefaultsManager.getPassword(),
-                using: loginCompletionHandler
-            )
-            //fireBaseAuthManager.reAuth(using: loginCompletionHandler)
-        }
+        fireBaseAuthManager.reAuth(using: reAuthCompletionHandler)
         NSLog(TAG + "tryAuth: exit")
     }
         
-    // MARK: результат авторизации
-    lazy var loginCompletionHandler: (Int) -> Void = { doneWorking in
-        NSLog(self.TAG + "loginCompletionHandler: entrance")
+    // MARK: результат ре-авторизации
+    lazy var reAuthCompletionHandler: (Int, String) -> Void = { doneWorking, desc in
+        NSLog(self.TAG + "reAuthCompletionHandler: entrance")
         switch doneWorking {
-        case 0:  //  неудачная авторизация
-            NSLog(self.TAG + "loginCompletionHandler: doneWorking = " + String(doneWorking))
+        case 0: //  удачный вход
+            NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = 0")
+            self.fireBaseCloudManager.getCloudData()
+        case 4: //  сетевая ошибка
+            NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = 4")
+            
             self.settingStatusBar(nameColor: "redColor")
             self.navigationBar.title = "You not logged in!"
             Task {
@@ -113,20 +110,45 @@ class MainViewController: UIViewController, ChartViewDelegate, UITextFieldDelega
                 try? await Task.sleep(nanoseconds: 6_000_000_000)
                 self.navigationBar.title = "KerdoIndexSPORT"
             }
-        case 1:  //  удачная авторизация
-            NSLog(self.TAG + "loginCompletionHandler: doneWorking = " + String(doneWorking))
-            if self.fireBaseAuthManager.authWas {
-                NSLog(self.TAG + "loginCompletionHandler: authWas == true")
-                self.fireBaseCloudManager.addUserInCloudData()
-            } else {
-                NSLog(self.TAG + "loginCompletionHandler: authWas == false")
-                self.fireBaseCloudManager.getCloudData()
+            
+            let alert = UIAlertController(title: "Check your internet connection", message: nil, preferredStyle: .actionSheet)
+            let okAction = UIAlertAction(title: "OK", style: .destructive) { [weak self] (_) in
+                NSLog(self!.TAG + "reAuthCompletionHandler: UIAlertController: OK")
             }
-        default:
-            NSLog(self.TAG + "loginCompletionHandler: doneWorking = " + String(doneWorking))
+            alert.addAction(okAction)
+            //  для ipad'ов
+            if let popover = alert.popoverPresentationController{
+                NSLog(self.TAG + "clickClearButton: popoverPresentationController: for ipad's")
+                //popover.sourceView = self.loginButton
+            }
+            self.present(alert, animated: true, completion: nil)
+        default:    //  НЕудачный вход
+            NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = " + String(doneWorking))
+            
+            self.settingStatusBar(nameColor: "redColor")
+            self.navigationBar.title = "You not logged in!"
+            Task {
+                NSLog(self.TAG + "installNameUser: Task")
+                try? await Task.sleep(nanoseconds: 3_000_000_000)
+                self.settingStatusBar(nameColor: "accentColor")
+                try? await Task.sleep(nanoseconds: 6_000_000_000)
+                self.navigationBar.title = "KerdoIndexSPORT"
+            }
+            
+            let alert = UIAlertController(title: "Unexpected login error. Try login manually", message: nil, preferredStyle: .actionSheet)
+            let okAction = UIAlertAction(title: "OK", style: .destructive) { [weak self] (_) in
+                NSLog(self!.TAG + "reAuthCompletionHandler: UIAlertController: OK")
+            }
+            alert.addAction(okAction)
+            //  для ipad'ов
+            if let popover = alert.popoverPresentationController{
+                NSLog(self.TAG + "clickClearButton: popoverPresentationController: for ipad's")
+                //popover.sourceView = self.loginButton
+            }
+            self.present(alert, animated: true, completion: nil)
         }
-
-        NSLog(self.TAG + "loginCompletionHandler: exit")
+    
+        NSLog(self.TAG + "reAuthCompletionHandler: exit")
     }
     
     // MARK: отображение экрана
@@ -140,6 +162,7 @@ class MainViewController: UIViewController, ChartViewDelegate, UITextFieldDelega
         }
         installNameUser()
         gettingJson()
+        
         NSLog(TAG + "viewWillAppear: exit")
     }
     
@@ -680,15 +703,15 @@ class MainViewController: UIViewController, ChartViewDelegate, UITextFieldDelega
         //  настройка отображения графика
         let data = BarChartData(dataSet: set)
         barKedroChart.data = data
-        barKedroChart.dragYEnabled = false
-        barKedroChart.legend.enabled = false
-        barKedroChart.doubleTapToZoomEnabled = false
-        barKedroChart.xAxis.granularityEnabled = true
-        barKedroChart.xAxis.granularity = 1.0
-        barKedroChart.barData?.barWidth = 0.5
+        barKedroChart.dragYEnabled = false  //  заблокировать прокрутку по оси y
+        barKedroChart.legend.enabled = false//  отключить легенду графика
+        barKedroChart.doubleTapToZoomEnabled = false//  включить двойной тап для увеливения
+        barKedroChart.xAxis.granularityEnabled = true// включить принудительную детализацию
+        barKedroChart.xAxis.granularity = 1.0   //  детализация графика вплоть до целых чисел
+        barKedroChart.barData?.barWidth = 0.5   //  ширина столбца
         if measures1.count != 0 {
-            barKedroChart.moveViewToX(Double(measures1.count))
-            barKedroChart.setVisibleXRangeMaximum(12)
+            barKedroChart.moveViewToX(Double(measures1.count))  //  прокрутка графика до последнего измерения
+                barKedroChart.setVisibleXRangeMaximum(12)   // максимальное количество отображаемых измерений
         }
         NSLog(TAG + "createKedroChart: exit")
     }

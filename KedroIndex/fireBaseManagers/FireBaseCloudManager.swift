@@ -63,7 +63,7 @@ class FireBaseCloudManager {
             }
     }
     
-    // MARK:  обнолвние даты последнего обновления бд
+    // MARK:  обновление даты последнего обновления бд
     func updateLastDateInCloudData(){
         NSLog(TAG + "updateLastDateInCloudData: entrance: userDefaultsManager.getLastDate = " + userDefaultsManager.getLastDate())
         db.collection("users").document(userDefaultsManager.getIdUser())
@@ -121,6 +121,8 @@ class FireBaseCloudManager {
             .getDocument{ (document, error) in
             if let document = document, document.exists {
                 self.syncData(result: document)
+                let name = document.get("name") as! String
+                self.userDefaultsManager.saveYourName(name: name)
             } else {
                 NSLog(self.TAG + "getCloudData: Document does not exist")
             }
@@ -137,7 +139,7 @@ class FireBaseCloudManager {
         } else {    //  если облако НЕ пустое
             if userDefaultsManager.getLastDate() != "" {    //  телефон НЕ пуст
                 let resultOfComparison = dataComparison(result: result)
-                if resultOfComparison! > 0{     //  облако актуальнее телефона
+                if resultOfComparison! > 0 {     //  облако актуальнее телефона
                     NSLog(TAG + "syncData: resultOfComparison! > 0")
                     userDefaultsManager.saveLastDate(lastDate: result.get("lastDate") as! String)
                     userDefaultsManager.saveJson(json: result.get("json") as! String)
