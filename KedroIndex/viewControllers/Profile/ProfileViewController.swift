@@ -10,6 +10,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var regisLoginStackView: UIStackView!
     @IBOutlet weak var registrationButton: UIButton!
+    @IBOutlet weak var authInfoLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     
@@ -47,14 +48,9 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
     func authTrueAction(){
         NSLog(TAG + "authTrueAction: entrance")
         
-        if (userDefaultsManager.getYourName() != "0" && userDefaultsManager.getYourName() != ""){
-            //nameTextField.text = userDefaultsManager.getYourName()
-        }
-        if (userDefaultsManager.getYourEmail() != "0"){
-            //emailTextField.text = userDefaultsManager.getYourEmail()
-        }
         stateAuthLabel.text = "You loggined as " + self.userDefaultsManager.getYourEmail()
         nameTextField.text = userDefaultsManager.getYourName()
+        authInfoLabel.text = "Click on the red button to logout"
         logoutButton.isHidden = false
         regisLoginStackView.isHidden = true
         nameStackView.isHidden = false
@@ -68,6 +64,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate {
         
         stateAuthLabel.text = "Log in or register in the system"
         nameTextField.text = ""
+        authInfoLabel.text = "Log in if you already have an account, or register"
         logoutButton.isHidden = true
         regisLoginStackView.isHidden = false
         nameStackView.isHidden = true

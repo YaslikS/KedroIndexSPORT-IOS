@@ -44,7 +44,10 @@ class LoginViewController: UIViewController {
         NSLog(TAG + "RegisterButtonClicked: entrance")
         if emailValid && passValid {
             NSLog(TAG + "LoginButtonClicked: emailValid && passValid && nameValid == true")
-            loginAction()
+            fireBaseAuthManager.login(email: emailTextField.text!,
+                                      pass: sha256(passwordTextField.text!),
+                                      using: loginCompletionHandler
+            )
         } else {
             NSLog(TAG + "LoginButtonClicked: emailValid && passValid && nameValid == false")
             if emailTextField.text == "" {
@@ -54,16 +57,6 @@ class LoginViewController: UIViewController {
                 passwordWorningLabel.isHidden = false
             }
         }
-    }
-    
-    // MARK: действия по нажатию на кнопку входа
-    func loginAction(){
-        NSLog(TAG + "registerAction: entrance")
-        fireBaseAuthManager.login(email: emailTextField.text!,
-                                  pass: sha256(passwordTextField.text!),
-                                  using: loginCompletionHandler
-        )
-        NSLog(TAG + "registerAction: exit")
     }
     
     // MARK: результат входа
@@ -108,6 +101,19 @@ class LoginViewController: UIViewController {
             let alert = UIAlertController(title: "There is no such user", message: nil, preferredStyle: .actionSheet)
             let okAction = UIAlertAction(title: "OK", style: .destructive) { [weak self] (_) in
                 NSLog(self!.TAG + "loginCompletionHandler: UIAlertController: OK")
+            }
+            alert.addAction(okAction)
+            //  для ipad'ов
+            if let popover = alert.popoverPresentationController{
+                NSLog(self.TAG + "clickClearButton: popoverPresentationController: for ipad's")
+                popover.sourceView = self.loginButton
+            }
+            self.present(alert, animated: true, completion: nil)
+        case 4:
+            NSLog(self.TAG + "registerCompletionHandler: doneWorking = 2")
+            let alert = UIAlertController(title: "Check your internet connection", message: nil, preferredStyle: .actionSheet)
+            let okAction = UIAlertAction(title: "OK", style: .destructive) { [weak self] (_) in
+                NSLog(self!.TAG + "registerCompletionHandler: UIAlertController: OK")
             }
             alert.addAction(okAction)
             //  для ipad'ов

@@ -167,8 +167,8 @@
 		C54123AC29508F1500864D31 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				C51A988E2A72EC6500576A36 /* CoreData */,
 				C51A988D2A72EC5800576A36 /* Json */,
+				C51A988E2A72EC6500576A36 /* CoreData */,
 			);
 			path = model;
 			sourceTree = "<group>";
