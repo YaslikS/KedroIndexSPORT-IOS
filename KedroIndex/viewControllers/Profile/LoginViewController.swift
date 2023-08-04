@@ -8,6 +8,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordWorningLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
     
     
     var userDefaultsManager = UserDefaultsManager()
@@ -48,6 +49,7 @@ class LoginViewController: UIViewController {
                                       pass: sha256(passwordTextField.text!),
                                       using: loginCompletionHandler
             )
+            loginActivityIndicator.isHidden = false
         } else {
             NSLog(TAG + "LoginButtonClicked: emailValid && passValid && nameValid == false")
             if emailTextField.text == "" {
@@ -82,6 +84,7 @@ class LoginViewController: UIViewController {
                 NSLog(self.TAG + "clickClearButton: popoverPresentationController: for ipad's")
                 popover.sourceView = self.loginButton
             }
+            self.loginActivityIndicator.isHidden = true
             self.present(alert, animated: true, completion: nil)
         case 2: //  неправильный пароль
             NSLog(self.TAG + "loginCompletionHandler: doneWorking = 2")
@@ -95,6 +98,7 @@ class LoginViewController: UIViewController {
                 NSLog(self.TAG + "clickClearButton: popoverPresentationController: for ipad's")
                 popover.sourceView = self.loginButton
             }
+            self.loginActivityIndicator.isHidden = true
             self.present(alert, animated: true, completion: nil)
         case 3: //  такого пользователя нет
             NSLog(self.TAG + "loginCompletionHandler: doneWorking = 3")
@@ -108,6 +112,7 @@ class LoginViewController: UIViewController {
                 NSLog(self.TAG + "clickClearButton: popoverPresentationController: for ipad's")
                 popover.sourceView = self.loginButton
             }
+            self.loginActivityIndicator.isHidden = true
             self.present(alert, animated: true, completion: nil)
         case 4:
             NSLog(self.TAG + "registerCompletionHandler: doneWorking = 2")
@@ -121,8 +126,10 @@ class LoginViewController: UIViewController {
                 NSLog(self.TAG + "clickClearButton: popoverPresentationController: for ipad's")
                 popover.sourceView = self.loginButton
             }
+            self.loginActivityIndicator.isHidden = true
             self.present(alert, animated: true, completion: nil)
         default:
+            self.loginActivityIndicator.isHidden = true
             NSLog(self.TAG + "loginCompletionHandler: doneWorking = " + String(doneWorking))
         }
     
@@ -141,6 +148,7 @@ class LoginViewController: UIViewController {
                 self.userDefaultsManager.saveYourEmail(emailAddress: self.emailTextField.text ?? "")
                 self.userDefaultsManager.savePassword(password: sha256(self.passwordTextField.text ?? ""))
                 NSLog(self.TAG + "typeUserCompletionHandler: doneWorking = 1: stateAuth() = " + String(self.fireBaseAuthManager.stateAuth()))
+                self.loginActivityIndicator.isHidden = true
                 self.navigationController?.popViewController(animated: true)
             } else {
                 NSLog(self.TAG + "typeUserCompletionHandler: doneWorking = 1: typeUser == t")
@@ -156,6 +164,7 @@ class LoginViewController: UIViewController {
                     NSLog(self.TAG + "clickClearButton: popoverPresentationController: for ipad's")
                     popover.sourceView = self.loginButton
                 }
+                self.loginActivityIndicator.isHidden = true
                 self.present(alert, animated: true, completion: nil)
             }
         case 0:
@@ -172,8 +181,10 @@ class LoginViewController: UIViewController {
                 NSLog(self.TAG + "clickClearButton: popoverPresentationController: for ipad's")
                 popover.sourceView = self.loginButton
             }
+            self.loginActivityIndicator.isHidden = true
             self.present(alert, animated: true, completion: nil)
         default:
+            self.loginActivityIndicator.isHidden = true
             NSLog(self.TAG + "typeUserCompletionHandler: doneWorking = default")
         }
     
@@ -233,6 +244,7 @@ class LoginViewController: UIViewController {
             navigationBar.standardAppearance = navBarAppearance
             navigationBar.scrollEdgeAppearance = navBarAppearance
         }
+        loginActivityIndicator.isHidden = true
         
         NSLog(TAG + "settingsViews: exit")
     }

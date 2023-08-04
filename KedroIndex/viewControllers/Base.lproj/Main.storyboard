@@ -560,27 +560,43 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIc-XL-Vzo" userLabel="Login Button">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Bu0-g7-CHZ">
                                         <rect key="frame" x="0.0" y="152.66666666666669" width="368" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIc-XL-Vzo" userLabel="Login Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="293" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="an6-YU-u8q"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                                <connections>
+                                                    <action selector="loginButtonClicked:" destination="dyk-5p-aW9" eventType="touchUpInside" id="kfh-dn-qcs"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="J6f-Me-T8b" userLabel="Login Activity Indicator">
+                                                <rect key="frame" x="308" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="0ty-fN-c85"/>
+                                                </constraints>
+                                            </activityIndicatorView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="an6-YU-u8q"/>
+                                            <constraint firstAttribute="bottom" secondItem="J6f-Me-T8b" secondAttribute="bottom" id="AQ9-DK-Rza"/>
+                                            <constraint firstAttribute="trailing" secondItem="J6f-Me-T8b" secondAttribute="trailing" id="WVL-tU-z2a"/>
+                                            <constraint firstItem="J6f-Me-T8b" firstAttribute="top" secondItem="Bu0-g7-CHZ" secondAttribute="top" id="nl5-Bw-7ut"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Login"/>
-                                        <connections>
-                                            <action selector="loginButtonClicked:" destination="dyk-5p-aW9" eventType="touchUpInside" id="kfh-dn-qcs"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vQx-83-clZ" secondAttribute="trailing" id="NTc-Jb-s4G"/>
                                     <constraint firstAttribute="trailing" secondItem="EjL-xs-dfQ" secondAttribute="trailing" id="XOF-ib-c7L"/>
+                                    <constraint firstItem="Bu0-g7-CHZ" firstAttribute="leading" secondItem="dEu-FC-9wJ" secondAttribute="leading" id="ZWY-li-Vmf"/>
                                     <constraint firstAttribute="trailing" secondItem="ucJ-rY-iqY" secondAttribute="trailing" id="fb8-B7-nPe"/>
                                     <constraint firstItem="EjL-xs-dfQ" firstAttribute="leading" secondItem="dEu-FC-9wJ" secondAttribute="leading" id="l3l-95-ldp"/>
-                                    <constraint firstAttribute="trailing" secondItem="bIc-XL-Vzo" secondAttribute="trailing" id="npf-ZL-d1q"/>
                                     <constraint firstItem="vQx-83-clZ" firstAttribute="leading" secondItem="dEu-FC-9wJ" secondAttribute="leading" id="qqT-g0-tvI"/>
-                                    <constraint firstItem="bIc-XL-Vzo" firstAttribute="leading" secondItem="dEu-FC-9wJ" secondAttribute="leading" id="xfx-9o-nYA"/>
                                     <constraint firstItem="ucJ-rY-iqY" firstAttribute="leading" secondItem="dEu-FC-9wJ" secondAttribute="leading" id="yMm-1n-ZWw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bu0-g7-CHZ" secondAttribute="trailing" id="yZm-Xo-rVN"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -596,6 +612,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="VMX-Dc-5Uo" id="eVx-MQ-wKV"/>
                         <outlet property="emailWorningLabel" destination="OfR-34-t8J" id="rFJ-Is-sb1"/>
+                        <outlet property="loginActivityIndicator" destination="J6f-Me-T8b" id="3bV-53-M1f"/>
                         <outlet property="loginButton" destination="bIc-XL-Vzo" id="4QP-2Q-5bd"/>
                         <outlet property="navigationBar" destination="nk2-LS-ghj" id="aL0-eL-6Id"/>
                         <outlet property="passwordTextField" destination="Y6v-nc-5GD" id="ee0-mh-uDr"/>
@@ -905,28 +922,44 @@
                                             <constraint firstAttribute="trailing" secondItem="eM8-cX-PxO" secondAttribute="trailing" id="xCD-B4-6UE"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wq-lm-2lp" userLabel="Login Button">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="lfE-vA-Wzh">
                                         <rect key="frame" x="0.0" y="301.66666666666669" width="368" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wq-lm-2lp" userLabel="Login Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Ybr-x0-dzc"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Registration"/>
+                                                <connections>
+                                                    <action selector="RegisterButtonClicked:" destination="Ddi-Vz-A4Z" eventType="touchUpInside" id="LRc-Er-Sws"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Dmu-ll-GTu" userLabel="Login Activity Indicator">
+                                                <rect key="frame" x="308" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="lsD-jg-CCH"/>
+                                                </constraints>
+                                            </activityIndicatorView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="Ybr-x0-dzc"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dmu-ll-GTu" secondAttribute="bottom" id="542-Na-Xto"/>
+                                            <constraint firstItem="Dmu-ll-GTu" firstAttribute="top" secondItem="lfE-vA-Wzh" secondAttribute="top" id="gLW-DJ-niZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dmu-ll-GTu" secondAttribute="trailing" id="uR9-Zz-kiQ"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Registration"/>
-                                        <connections>
-                                            <action selector="RegisterButtonClicked:" destination="Ddi-Vz-A4Z" eventType="touchUpInside" id="LRc-Er-Sws"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="zsm-Wh-9AQ" secondAttribute="trailing" id="3Sf-ES-6IO"/>
+                                    <constraint firstAttribute="trailing" secondItem="lfE-vA-Wzh" secondAttribute="trailing" id="3al-MC-sA8"/>
                                     <constraint firstItem="QgA-eS-cRC" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="8Hd-Be-L8L"/>
                                     <constraint firstItem="nSZ-2K-g5y" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="LOx-XW-YyJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Wq-lm-2lp" secondAttribute="trailing" id="MRg-5O-TbO"/>
                                     <constraint firstAttribute="trailing" secondItem="nSZ-2K-g5y" secondAttribute="trailing" id="QVm-Kk-mLw"/>
                                     <constraint firstAttribute="trailing" secondItem="SjL-fg-GjA" secondAttribute="trailing" id="RQv-68-pGA"/>
                                     <constraint firstItem="SjL-fg-GjA" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="XmG-DB-IJd"/>
                                     <constraint firstAttribute="trailing" secondItem="QgA-eS-cRC" secondAttribute="trailing" id="agL-it-Ph0"/>
-                                    <constraint firstItem="1Wq-lm-2lp" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="iRC-5c-ESa"/>
+                                    <constraint firstItem="lfE-vA-Wzh" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="j9q-Hf-9fH"/>
                                     <constraint firstItem="zsm-Wh-9AQ" firstAttribute="leading" secondItem="LiA-mZ-WG4" secondAttribute="leading" id="t9q-rx-m0n"/>
                                 </constraints>
                             </stackView>
@@ -943,6 +976,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="ebd-LU-ZMm" id="v2I-Yp-l7T"/>
                         <outlet property="emailWorningLabel" destination="nT4-5Q-KAV" id="fPh-LR-dtV"/>
+                        <outlet property="loginActivityIndicator" destination="Dmu-ll-GTu" id="OeR-Ao-xC0"/>
                         <outlet property="nameTextField" destination="eM8-cX-PxO" id="D0p-3L-smr"/>
                         <outlet property="nameWorningLabel" destination="7vr-v2-ftT" id="QVW-uV-kmu"/>
                         <outlet property="navigationBar" destination="MDs-vc-bZ3" id="ZDY-C8-CWX"/>
