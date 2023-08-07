@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C50140B229F296EA007E97A9 /* sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50140B129F296EA007E97A9 /* sha256.swift */; };
+		C514D2AB2A8100BF003144C0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514D2AA2A8100BF003144C0 /* Strings.swift */; };
 		C51A988C2A727ED700576A36 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A988B2A727ED700576A36 /* RegisterViewController.swift */; };
 		C51A98A12A72F14300576A36 /* UserCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A989F2A72F14300576A36 /* UserCD+CoreDataClass.swift */; };
 		C51A98A22A72F14300576A36 /* UserCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A98A02A72F14300576A36 /* UserCD+CoreDataProperties.swift */; };
@@ -42,7 +42,7 @@
 		7E9FEB1D642390318FFD0CB7 /* Pods-KerdoIndexSPORT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerdoIndexSPORT.release.xcconfig"; path = "Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT.release.xcconfig"; sourceTree = "<group>"; };
 		AFBE6F6E09CA519CD789E45E /* Pods-KerdoIndexSPORT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerdoIndexSPORT.debug.xcconfig"; path = "Target Support Files/Pods-KerdoIndexSPORT/Pods-KerdoIndexSPORT.debug.xcconfig"; sourceTree = "<group>"; };
 		C04A23045C412977F7AEED04 /* Pods-KedroIndex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KedroIndex.release.xcconfig"; path = "Target Support Files/Pods-KedroIndex/Pods-KedroIndex.release.xcconfig"; sourceTree = "<group>"; };
-		C50140B129F296EA007E97A9 /* sha256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sha256.swift; sourceTree = "<group>"; };
+		C514D2AA2A8100BF003144C0 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		C51A988B2A727ED700576A36 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C51A989F2A72F14300576A36 /* UserCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCD+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C51A98A02A72F14300576A36 /* UserCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -169,6 +169,7 @@
 			children = (
 				C51A988D2A72EC5800576A36 /* Json */,
 				C51A988E2A72EC6500576A36 /* CoreData */,
+				C514D2AA2A8100BF003144C0 /* Strings.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -198,7 +199,6 @@
 				C545FEBA2917F8390035C945 /* SceneDelegate.swift */,
 				C54123AA29508E8A00864D31 /* fireBaseManagers */,
 				C54123AC29508F1500864D31 /* model */,
-				C50140B129F296EA007E97A9 /* sha256.swift */,
 				C54123AB29508ED800864D31 /* viewControllers */,
 				C545FEC42917F83A0035C945 /* Assets.xcassets */,
 				C5D69B9929C08ED6008D0BE5 /* GoogleService-Info.plist */,
@@ -329,7 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C51A98A62A744DB800576A36 /* LoginViewController.swift in Sources */,
-				C50140B229F296EA007E97A9 /* sha256.swift in Sources */,
 				C546CCB72919359800DC28D3 /* ProfileViewController.swift in Sources */,
 				C5FA140C294CACC700796B86 /* MeasureJsonManager.swift in Sources */,
 				C5B7AA7929C1F12700463618 /* MeasureNew.swift in Sources */,
@@ -342,6 +341,7 @@
 				C54F559F2919AA4A00BF963A /* NaviViewController.swift in Sources */,
 				C589F99A29C3611E0061188D /* FireBaseCloudManager.swift in Sources */,
 				C51A98A22A72F14300576A36 /* UserCD+CoreDataProperties.swift in Sources */,
+				C514D2AB2A8100BF003144C0 /* Strings.swift in Sources */,
 				C5FA1408294C850D00796B86 /* AboutKerdoIndexViewController.swift in Sources */,
 				C5B7AA7B29C1F20800463618 /* JsonStructure.swift in Sources */,
 				C51A988C2A727ED700576A36 /* RegisterViewController.swift in Sources */,
@@ -535,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9.1;
+				MARKETING_VERSION = 0.9.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -582,7 +582,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9.1;
+				MARKETING_VERSION = 0.9.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

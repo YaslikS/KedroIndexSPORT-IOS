@@ -52,7 +52,7 @@ class RegisterViewController: UIViewController {
             NSLog(TAG + "RegisterButtonClicked: emailValid && passValid && nameValid == true")
             fireBaseAuthManager.auth(
                 email: emailTextField.text!,
-                pass: sha256(passwordTextField.text!),
+                pass: passwordTextField.text!,
                 using: registerCompletionHandler
             )
             loginActivityIndicator.isHidden = false
@@ -77,7 +77,7 @@ class RegisterViewController: UIViewController {
         case 0: //  удачная регистрация
             NSLog(self.TAG + "registerCompletionHandler: doneWorking = 0")
             self.userDefaultsManager.saveYourEmail(emailAddress: self.emailTextField.text ?? "")
-            self.userDefaultsManager.savePassword(password: sha256(self.passwordTextField.text ?? ""))
+            self.userDefaultsManager.savePassword(password: self.passwordTextField.text ?? "")
             self.userDefaultsManager.saveYourName(name: self.nameTextField.text ?? "")
             self.fireBaseCloudManager.addUserInCloudData()
             NSLog(self.TAG + "registerCompletionHandler: doneWorking = 1: stateAuth() = " + String(self.fireBaseAuthManager.stateAuth()))

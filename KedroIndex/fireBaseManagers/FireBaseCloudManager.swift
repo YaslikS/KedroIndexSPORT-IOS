@@ -15,7 +15,7 @@ class FireBaseCloudManager {
     func addUserInCloudData(){
         NSLog(TAG + "addUserInCloudData: entrance")
         var jsonForUpdate = ""
-        if userDefaultsManager.getJson() != "empty"{
+        if userDefaultsManager.getJson() != Strings.jsonEmptyFieldStr.rawValue {
             jsonForUpdate = userDefaultsManager.getJson()
         }
         
@@ -26,7 +26,7 @@ class FireBaseCloudManager {
         let lastDate = userDefaultsManager.getLastDate()
         NSLog(TAG + "addUserInCloudData: userDefaultsManager.getIdUser = " + idUser)
         
-        db.collection("users").document(idUser).setData([
+        db.collection(Strings.usersTableStr.rawValue).document(idUser).setData([
             "id": idUser,
             "type": "s",
             "name": yourName,
@@ -49,12 +49,12 @@ class FireBaseCloudManager {
     func updateJsonInCloudData(){
         NSLog(TAG + "updateJsonInCloudData: entrance: userDefaultsManager.getIdUser = " + userDefaultsManager.getIdUser())
         var jsonForUpdate = ""
-        if userDefaultsManager.getJson() != "empty"{
+        if userDefaultsManager.getJson() != Strings.jsonEmptyFieldStr.rawValue {
             jsonForUpdate = userDefaultsManager.getJson()
         }
-        db.collection("users")
+        db.collection(Strings.usersTableStr.rawValue)
             .document(userDefaultsManager.getIdUser())
-            .updateData(["json": jsonForUpdate]){ error in
+            .updateData([Strings.jsonFieldStr.rawValue: jsonForUpdate]){ error in
                 if let error = error {
                     NSLog(self.TAG + "updateJsonInCloudData: Error updating document: \(error.localizedDescription)")
                 } else {
@@ -66,8 +66,8 @@ class FireBaseCloudManager {
     // MARK:  обновление даты последнего обновления бд
     func updateLastDateInCloudData(){
         NSLog(TAG + "updateLastDateInCloudData: entrance: userDefaultsManager.getLastDate = " + userDefaultsManager.getLastDate())
-        db.collection("users").document(userDefaultsManager.getIdUser())
-            .updateData(["lastDate": userDefaultsManager.getLastDate()]){ error in
+        db.collection(Strings.usersTableStr.rawValue).document(userDefaultsManager.getIdUser())
+            .updateData([Strings.lastDateFieldStr.rawValue: userDefaultsManager.getLastDate()]){ error in
                 if let error = error {
                     NSLog(self.TAG + "updateLastDateInCloudData: Error updating document: \(error.localizedDescription)")
                 } else {
@@ -79,8 +79,8 @@ class FireBaseCloudManager {
     // MARK:  обновление имени
     func updateNameInCloudData(){
         NSLog(TAG + "updateNameInCloudData: entrance: userDefaultsManager.getYourName = " + userDefaultsManager.getYourName())
-        db.collection("users").document(userDefaultsManager.getIdUser())
-            .updateData(["name": userDefaultsManager.getYourName()]){ error in
+        db.collection(Strings.usersTableStr.rawValue).document(userDefaultsManager.getIdUser())
+            .updateData([Strings.nameFieldStr.rawValue: userDefaultsManager.getYourName()]){ error in
                 if let error = error {
                     NSLog(self.TAG + "updateNameInCloudData: Error updating document: \(error.localizedDescription)")
                 } else {
@@ -92,9 +92,9 @@ class FireBaseCloudManager {
     // MARK:  обновление url иконки
     func updateUrlIconInCloudData(){
         NSLog(TAG + "updateUrlIconInCloudData: entrance: userDefaultsManager.getYourImageURL = " + userDefaultsManager.getYourImageURL())
-        db.collection("users")
+        db.collection(Strings.usersTableStr.rawValue)
             .document(userDefaultsManager.getIdUser())
-            .updateData(["iconUrl": userDefaultsManager.getYourImageURL()]){ error in
+            .updateData([Strings.iconUrlFieldStr.rawValue: userDefaultsManager.getYourImageURL()]){ error in
                 if let error = error {
                     NSLog(self.TAG + "updateUrlIconInCloudData: Error updating document: \(error.localizedDescription)")
                 } else {
@@ -106,7 +106,7 @@ class FireBaseCloudManager {
     // MARK:  удаление пользователя
     func deleteInCloudData(){
         NSLog(TAG + "deleteInCloudData: entrance: userDefaultsManager.getIdUser = " + userDefaultsManager.getIdUser())
-        db.collection("users").document(userDefaultsManager.getIdUser())
+        db.collection(Strings.usersTableStr.rawValue).document(userDefaultsManager.getIdUser())
             .delete(){ error in
             if error != nil {
                 NSLog(self.TAG + "deleteInCloudData: error = " + error!.localizedDescription)
@@ -117,11 +117,11 @@ class FireBaseCloudManager {
     
     // MARK:  получение данных пользователя
     func getCloudData(){
-        db.collection("users").document(userDefaultsManager.getIdUser())
+        db.collection(Strings.usersTableStr.rawValue).document(userDefaultsManager.getIdUser())
             .getDocument{ (document, error) in
             if let document = document, document.exists {
                 self.syncData(result: document)
-                let name = document.get("name") as! String
+                let name = document.get(Strings.nameFieldStr.rawValue) as! String
                 self.userDefaultsManager.saveYourName(name: name)
             } else {
                 NSLog(self.TAG + "getCloudData: Document does not exist")
@@ -132,7 +132,7 @@ class FireBaseCloudManager {
     // MARK: синхронизация данных между сервером и телефоном
     func syncData(result: DocumentSnapshot){
         NSLog(TAG + "syncData: entrance")
-        if (result.get("lastDate") as! String) == "" {   //  если облако пустое
+        if (result.get(Strings.lastDateFieldStr.rawValue) as! String) == "" {   //  если облако пустое
             NSLog(TAG + "syncData: cloud is empty")
             updateJsonInCloudData()
             updateLastDateInCloudData()
@@ -141,8 +141,8 @@ class FireBaseCloudManager {
                 let resultOfComparison = dataComparison(result: result)
                 if resultOfComparison! > 0 {     //  облако актуальнее телефона
                     NSLog(TAG + "syncData: resultOfComparison! > 0")
-                    userDefaultsManager.saveLastDate(lastDate: result.get("lastDate") as! String)
-                    userDefaultsManager.saveJson(json: result.get("json") as! String)
+                    userDefaultsManager.saveLastDate(lastDate: result.get(Strings.lastDateFieldStr.rawValue) as! String)
+                    userDefaultsManager.saveJson(json: result.get(Strings.jsonFieldStr.rawValue) as! String)
                 } else if resultOfComparison! < 0 { //  телефон актуальнее облака
                     NSLog(TAG + "syncData: resultOfComparison! < 0")
                     updateJsonInCloudData()
@@ -152,8 +152,8 @@ class FireBaseCloudManager {
                 }
             } else {    //  телефон пуст
                 NSLog(TAG + "syncData: phone is empty")
-                userDefaultsManager.saveLastDate(lastDate: result.get("lastDate") as! String)
-                userDefaultsManager.saveJson(json: result.get("json") as! String)
+                userDefaultsManager.saveLastDate(lastDate: result.get(Strings.lastDateFieldStr.rawValue) as! String)
+                userDefaultsManager.saveJson(json: result.get(Strings.jsonFieldStr.rawValue) as! String)
             }
         }
     }
@@ -161,8 +161,8 @@ class FireBaseCloudManager {
     // MARK:  сравнение дат
     func dataComparison(result: DocumentSnapshot) -> Int?{
         NSLog(TAG + "dataComparison: entrance")
-        guard let cloudDate = (result.get("lastDate") as! String).toDate() else {
-            NSLog(TAG + "dataComparison: dateString1: \(String(describing: result.get("lastDate"))) | Failed to cast to \"dd.MM.yyyy HH:mm:ss\"")
+        guard let cloudDate = (result.get(Strings.lastDateFieldStr.rawValue) as! String).toDate() else {
+            NSLog(TAG + "dataComparison: dateString1: \(String(describing: result.get(Strings.lastDateFieldStr.rawValue))) | Failed to cast to \"dd.MM.yyyy HH:mm:ss\"")
             return nil
         }
         guard let phoneDate = userDefaultsManager.getLastDate().toDate() else {
@@ -186,8 +186,8 @@ class FireBaseCloudManager {
     
     // MARK: получение типа пользователя
     func getTypeUser(email: String, using completionHandler: @escaping (Int, String?) -> Void){
-        db.collection("users").whereField(
-            "email", isEqualTo: email
+        db.collection(Strings.usersTableStr.rawValue).whereField(
+            Strings.emailFieldStr.rawValue, isEqualTo: email
         ).getDocuments{ (documents, error) in
             if let error = error {
                 NSLog(self.TAG + "getCloudData: Error getting documents: \(error)")
@@ -197,8 +197,7 @@ class FireBaseCloudManager {
                     NSLog(self.TAG + "getCloudData: documents?.isEmpty")
                     completionHandler(0, nil)
                 } else {
-                    let typeStr = documents!.documents[0].get("type") as! String
-                    //let typeStr = document!.get("type") as! String
+                    let typeStr = documents!.documents[0].get(Strings.typeFieldStr.rawValue) as! String
                     completionHandler(1, typeStr)
                 }
             }
