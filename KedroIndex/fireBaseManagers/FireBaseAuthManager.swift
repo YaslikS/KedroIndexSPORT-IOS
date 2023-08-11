@@ -1,6 +1,5 @@
 import Foundation
 import FirebaseAuth
-//import FIRAuthErrorCode
 
 class FireBaseAuthManager{
     

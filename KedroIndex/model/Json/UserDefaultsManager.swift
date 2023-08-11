@@ -19,6 +19,7 @@ class UserDefaultsManager {
     }
     
     // пароль к аккаунту
+    // TODO: под удаление - deprecated method
     func savePassword(password: String){
         UserDefaults.standard.set(password, forKey: "password")
     }
@@ -66,6 +67,7 @@ class UserDefaultsManager {
     }
     
     // пароль пользователя
+    // TODO: под удалениее - deprecated method
     func getPassword() -> String{
         return UserDefaults.standard.string(forKey: "password") ?? "0"
     }

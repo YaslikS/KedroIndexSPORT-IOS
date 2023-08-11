@@ -59,6 +59,7 @@ class MainViewController: UIViewController, ChartViewDelegate, UITextFieldDelega
     var userDefaultsManager = UserDefaultsManager()
     var fireBaseAuthManager = FireBaseAuthManager()
     var fireBaseCloudManager = FireBaseCloudManager()
+    var coreDataManager = CoreDataManager()
     let TAG = "MainViewController: "
     
     
@@ -98,6 +99,12 @@ class MainViewController: UIViewController, ChartViewDelegate, UITextFieldDelega
         case 0: //  удачный вход
             NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = 0")
             self.fireBaseCloudManager.getCloudData()
+            if (self.userDefaultsManager.getPassword() != "0"
+                && self.userDefaultsManager.getPassword() != ""
+            ){
+                self.coreDataManager.savePass(pass: self.userDefaultsManager.getPassword())
+                NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = 0: passCD = " + self.coreDataManager.getPass()!)
+            }
         case 4: //  сетевая ошибка
             NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = 4")
             

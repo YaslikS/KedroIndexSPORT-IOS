@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     var userDefaultsManager = UserDefaultsManager()
     var fireBaseAuthManager = FireBaseAuthManager()
     var fireBaseCloudManager = FireBaseCloudManager()
+    var coreDataManager = CoreDataManager()
     let TAG = "LoginViewController: "
     var emailValid = false
     var passValid = false
@@ -209,7 +210,8 @@ class LoginViewController: UIViewController {
                 NSLog(self.TAG + "typeUserCompletionHandler: doneWorking = 1: typeUser == s")
                 self.fireBaseCloudManager.getCloudData()
                 self.userDefaultsManager.saveYourEmail(emailAddress: self.emailTextField.text ?? "")
-                self.userDefaultsManager.savePassword(password: self.passwordTextField.text ?? "")
+                self.userDefaultsManager.savePassword(password: self.passwordTextField.text ?? "")// под удаление
+                self.coreDataManager.savePass(pass: self.passwordTextField.text ?? "")
                 NSLog(self.TAG + "typeUserCompletionHandler: doneWorking = 1: stateAuth() = " + String(self.fireBaseAuthManager.stateAuth()))
                 self.loginActivityIndicator.isHidden = true
                 self.navigationController?.popViewController(animated: true)
