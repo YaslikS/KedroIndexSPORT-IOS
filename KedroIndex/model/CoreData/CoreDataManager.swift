@@ -45,10 +45,18 @@ class CoreDataManager {
         NSLog(TAG + "getPass: before do")
         do{
             let results: NSArray = try context.fetch(request) as NSArray
-            if results.count > 0 {
+            if results.count == 1 {
                 let user = results[0] as! UserCD
                 pass = user.pass!
-                NSLog(TAG + "getPass: clear table success")
+                NSLog(TAG + "getPass: get pass success")
+            } else {
+                if results.count > 1 {
+                    NSLog(TAG + "getPass: so many userCD")
+                    pass = nil
+                } else {
+                    NSLog(TAG + "getPass: table is empty")
+                    pass = nil
+                }
             }
         }catch{
             NSLog(TAG + "getPass: Fetch Failed")
