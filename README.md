@@ -1,6 +1,6 @@
 # KedroIndexSPORT (iOS)
 
-Using/Используется: Storyboard; Swift; Pods; pod 'Charts'; pod 'IQKeyboardManagerSwift', '6.3.0'; pod 'ReachabilitySwift'; pod 'FirebaseAuth'; pod 'FirebaseFirestore'.
+Using/Используется: Storyboard; Swift; CoreData; Pods; pod 'Charts'; pod 'IQKeyboardManagerSwift', '6.3.0'; pod 'ReachabilitySwift'; pod 'FirebaseAuth'; pod 'FirebaseFirestore'.
 
 KerdoIndexSPORT is an application that allows you to keep personal statistics of the kerdo index and send it to the trainer.
 The Kerdo index is an indicator used to assess the activity of the autonomic nervous system. The index is calculated by the formula:
