@@ -20,9 +20,9 @@ class UserDefaultsManager {
     
     // пароль к аккаунту
     // TODO: под удаление - deprecated method
-    func savePassword(password: String){
-        UserDefaults.standard.set(password, forKey: "password")
-    }
+//    func savePassword(password: String){
+//        UserDefaults.standard.set(password, forKey: "password")
+//    }
     
     // ссылка на аватарку пользователя
     func saveYourImageURL(yourImageURL: String){
@@ -68,9 +68,9 @@ class UserDefaultsManager {
     
     // пароль пользователя
     // TODO: под удалениее - deprecated method
-    func getPassword() -> String{
-        return UserDefaults.standard.string(forKey: "password") ?? "0"
-    }
+//    func getPassword() -> String{
+//        return UserDefaults.standard.string(forKey: "password") ?? "0"
+//    }
     
     // ссылка на аватарку пользователя
     func getYourImageURL() -> String{
@@ -99,7 +99,7 @@ class UserDefaultsManager {
     // MARK: удаление всех данных
     func deleteUserInfo() {
         NSLog("deleteUserInfo" + "deleteUserInfo: entrance")
-        savePassword(password: "0")
+        //savePassword(password: "0")
         saveYourEmail(emailAddress: "0")
         saveYourName(name: "0")
         saveIdUser(idUser: "")

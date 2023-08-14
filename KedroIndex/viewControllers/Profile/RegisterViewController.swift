@@ -77,7 +77,7 @@ class RegisterViewController: UIViewController {
         case 0: //  удачная регистрация
             NSLog(self.TAG + "registerCompletionHandler: doneWorking = 0")
             self.userDefaultsManager.saveYourEmail(emailAddress: self.emailTextField.text ?? "")
-            self.userDefaultsManager.savePassword(password: self.passwordTextField.text ?? "")// под удаление
+            //self.userDefaultsManager.savePassword(password: self.passwordTextField.text ?? "")// под удаление
             self.coreDataManager.savePass(pass: self.passwordTextField.text ?? "")
             self.userDefaultsManager.saveYourName(name: self.nameTextField.text ?? "")
             self.fireBaseCloudManager.addUserInCloudData()
@@ -160,7 +160,7 @@ class RegisterViewController: UIViewController {
     
     // MARK: поле ввода пароля изменено
     @IBAction func passTextFieldChanged(_ sender: Any) {
-        NSLog(TAG + "passTextFieldChanged: userDefaultsManager?.getPassword = " + (userDefaultsManager.getPassword()))
+        NSLog(TAG + "passTextFieldChanged: userDefaultsManager?.getPassword = " + (coreDataManager.getPass() ?? "---"))
         passwordWorningLabel.isHidden = true
         if (!passwordTextField.text!.isEmpty
             && passwordTextField.text!.count >= 8

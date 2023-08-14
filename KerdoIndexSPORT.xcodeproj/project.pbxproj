@@ -135,8 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				C546CCB62919359800DC28D3 /* ProfileViewController.swift */,
-				C51A988B2A727ED700576A36 /* RegisterViewController.swift */,
 				C51A98A52A744DB700576A36 /* LoginViewController.swift */,
+				C51A988B2A727ED700576A36 /* RegisterViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -167,8 +167,8 @@
 		C54123AC29508F1500864D31 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				C51A988D2A72EC5800576A36 /* Json */,
 				C51A988E2A72EC6500576A36 /* CoreData */,
+				C51A988D2A72EC5800576A36 /* Json */,
 				C514D2AA2A8100BF003144C0 /* Strings.swift */,
 			);
 			path = model;
@@ -508,7 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2333;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6D3HJY6B2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -535,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.10;
+				MARKETING_VERSION = 0.10.5;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -555,7 +555,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2333;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6D3HJY6B2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -582,7 +582,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.10;
+				MARKETING_VERSION = 0.10.5;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.amed.KerdoIndexSPORT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

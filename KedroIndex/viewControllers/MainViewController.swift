@@ -88,7 +88,10 @@ class MainViewController: UIViewController, ChartViewDelegate, UITextFieldDelega
     // MARK: попытка авторизации
     func tryAuth(){
         NSLog(TAG + "tryAuth: entrance")
-        fireBaseAuthManager.reAuth(using: reAuthCompletionHandler)
+        fireBaseAuthManager.reAuth(
+            pass: coreDataManager.getPass()!,
+            using: reAuthCompletionHandler
+        )
         NSLog(TAG + "tryAuth: exit")
     }
         
@@ -97,14 +100,8 @@ class MainViewController: UIViewController, ChartViewDelegate, UITextFieldDelega
         NSLog(self.TAG + "reAuthCompletionHandler: entrance")
         switch doneWorking {
         case 0: //  удачный вход
-            NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = 0")
+            NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = 0: passCD = " + (self.coreDataManager.getPass() ?? "-----"))
             self.fireBaseCloudManager.getCloudData()
-            if (self.userDefaultsManager.getPassword() != "0"
-                && self.userDefaultsManager.getPassword() != ""
-            ){
-                self.coreDataManager.savePass(pass: self.userDefaultsManager.getPassword())
-                NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = 0: passCD = " + self.coreDataManager.getPass()!)
-            }
         case 4: //  сетевая ошибка
             NSLog(self.TAG + "reAuthCompletionHandler: doneWorking = 4")
             

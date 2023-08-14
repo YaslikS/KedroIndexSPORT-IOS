@@ -4,6 +4,7 @@ import FirebaseAuth
 class FireBaseAuthManager{
     
     var userDefaultsManager = UserDefaultsManager()
+    var coreDataManager = CoreDataManager()
     var emailUser: String!
     let TAG = "FireBaseAuthManager: "
     
@@ -20,9 +21,10 @@ class FireBaseAuthManager{
     }
     
     // MARK:  повторная авторизация
-    func reAuth(using completionHandler: @escaping (Int, String) -> Void){
+    func reAuth(pass: String, using completionHandler: @escaping (Int, String) -> Void){
         NSLog(TAG + "reAuth: entrance")
-        Auth.auth().currentUser?.reauthenticate(with: EmailAuthProvider.credential(withEmail: userDefaultsManager.getYourEmail(), password: userDefaultsManager.getPassword()), completion: { result, error in
+        NSLog(TAG + "reAuth: email = " + userDefaultsManager.getYourEmail())
+        Auth.auth().currentUser?.reauthenticate(with: EmailAuthProvider.credential(withEmail: userDefaultsManager.getYourEmail(), password: pass), completion: { result, error in
             if let error = error {
                 //  Произошла ошибка
                 NSLog(self.TAG + "reAuth: error: " + error.localizedDescription)
@@ -124,6 +126,8 @@ class FireBaseAuthManager{
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+            userDefaultsManager.deleteUserInfo()
+            coreDataManager.deletePass()
             NSLog(TAG + "logOut: succes")
         } catch let signOutError as NSError {
             NSLog(TAG + "logOut: Error signing out: " + signOutError.debugDescription)

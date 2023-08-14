@@ -210,7 +210,7 @@ class LoginViewController: UIViewController {
                 NSLog(self.TAG + "typeUserCompletionHandler: doneWorking = 1: typeUser == s")
                 self.fireBaseCloudManager.getCloudData()
                 self.userDefaultsManager.saveYourEmail(emailAddress: self.emailTextField.text ?? "")
-                self.userDefaultsManager.savePassword(password: self.passwordTextField.text ?? "")// под удаление
+                //self.userDefaultsManager.savePassword(password: self.passwordTextField.text ?? "")// под удаление
                 self.coreDataManager.savePass(pass: self.passwordTextField.text ?? "")
                 NSLog(self.TAG + "typeUserCompletionHandler: doneWorking = 1: stateAuth() = " + String(self.fireBaseAuthManager.stateAuth()))
                 self.loginActivityIndicator.isHidden = true
@@ -218,7 +218,8 @@ class LoginViewController: UIViewController {
             } else {
                 NSLog(self.TAG + "typeUserCompletionHandler: doneWorking = 1: typeUser == t")
                 self.fireBaseAuthManager.logOut()
-                self.userDefaultsManager.deleteUserInfo()
+                //self.userDefaultsManager.deleteUserInfo()
+                //self.coreDataManager.deletePass()
                 let alert = UIAlertController(title: "You are already registered as a trainer", message: nil, preferredStyle: .actionSheet)
                 let okAction = UIAlertAction(title: "OK", style: .destructive) { [weak self] (_) in
                     NSLog(self!.TAG + "typeUserCompletionHandler: UIAlertController: OK")
@@ -235,7 +236,8 @@ class LoginViewController: UIViewController {
         case 0:
             NSLog(self.TAG + "typeUserCompletionHandler: doneWorking = 0")
             self.fireBaseAuthManager.logOut()
-            self.userDefaultsManager.deleteUserInfo()
+            //self.userDefaultsManager.deleteUserInfo()
+            //self.coreDataManager.deletePass()
             let alert = UIAlertController(title: "Error in defining your role", message: nil, preferredStyle: .actionSheet)
             let okAction = UIAlertAction(title: "OK", style: .destructive) { [weak self] (_) in
                 NSLog(self!.TAG + "typeUserCompletionHandler: UIAlertController: OK")
@@ -281,7 +283,7 @@ class LoginViewController: UIViewController {
     
     // MARK: поле ввода пароля изменено
     @IBAction func passTextFieldChanged(_ sender: Any) {
-        NSLog(TAG + "passTextFieldChanged: userDefaultsManager?.getPassword = " + (userDefaultsManager.getPassword()))
+        NSLog(TAG + "passTextFieldChanged: coreDataManager.getPass = " + (self.coreDataManager.getPass() ?? "---"))
         passwordWorningLabel.isHidden = true
         if (!passwordTextField.text!.isEmpty
             && passwordTextField.text!.count >= 8
